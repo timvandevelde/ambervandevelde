@@ -1,7 +1,7 @@
 /**
  * Theme Name:       ambervandevelde
  * Theme URI:        http://www.timvandevelde.nl
- * Version:          0.1.0
+ * Version:          0.1.1
  * Description:      Theme for Amber
  * Author:           Tim van de Velde
  * GitHub Theme URI: https://github.com/timvandevelde/ambervandevelde
@@ -808,7 +808,7 @@ body.on-dark nav.main-navigation div.hamburger {
   opacity: 0.7;
 }
 section.colored {
-  background: #f3f2f0;
+  background: #cdac4c;
 }
 footer.main-footer {
   padding: 6rem 6rem 3rem 6rem;
@@ -934,19 +934,25 @@ section.full-size-title:after {
   width: 100%;
   background: black;
 }
-section.full-size-title .emphasis {
-  margin: 0 1.5rem 0 1rem;
-  font-family: 'Mighty-River', serif;
-  font-weight: normal;
-  font-size: 7rem;
-}
 section.full-size-title.white-on-black {
   background: black;
   color: white;
 }
 section.full-size-title.black-on-color {
-  background: #f3f2f0;
+  background: #cdac4c;
   color: black;
+}
+section.full-size-title h2 {
+  max-width: 83rem;
+  font-size: 6.5rem;
+  line-height: 7.5rem;
+  font-weight: bold;
+}
+section.full-size-title h2 .emphasis {
+  margin: 0 1.5rem 0 1rem;
+  font-family: 'Mighty-River', serif;
+  font-weight: normal;
+  font-size: 7.5rem;
 }
 figure.logo {
   display: inline-block;
@@ -1061,7 +1067,7 @@ ul.plus-list li:before {
   background: black;
 }
 .mfp-bg {
-  background: #f3f2f0;
+  background: #cdac4c;
 }
 /* overlay at start */
 .mfp-fade.mfp-bg {
@@ -1301,7 +1307,7 @@ section.homepage-portfolio article.homepage-portfolio-item {
 section.homepage-portfolio article.homepage-portfolio-item figure {
   margin: 0 0 2rem;
   height: 70vh;
-  background: #e8e6e2;
+  background: #c7a338;
 }
 section.homepage-portfolio article.homepage-portfolio-item h4 {
   margin: 5rem 0 0;
@@ -1410,7 +1416,7 @@ article#over-mij section.history .award div.content figure {
   height: 100%;
 }
 article#services section.services {
-  background: #f3f2f0;
+  background: #cdac4c;
 }
 article#services section.services article.service {
   position: relative;
