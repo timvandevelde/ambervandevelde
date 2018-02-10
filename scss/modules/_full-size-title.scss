@@ -1,0 +1,36 @@
+section.full-size-title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  color: black;
+  padding: 12rem 2rem;
+  height: 100vh;
+  &:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    bottom: 0;
+    width: 100%;
+    background: black;
+  }
+
+  .emphasis {
+    margin: 0 1.5rem 0 1rem;
+    font-family: $emphasis-font-family;
+    font-weight: normal;
+    font-size: 7rem;
+  }
+
+  &.white-on-black {
+    background: black;
+    color: white;
+  }
+
+  &.black-on-color {
+    background: $section-color;
+    color: black;
+  }
+}

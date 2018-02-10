@@ -1,0 +1,100 @@
+article#over-mij {
+
+  section.full-size-photo {
+    figure {
+      height: 80vh;
+      background: #eee;
+    }
+  }
+
+  section.history {
+    padding: 10rem 0;
+
+    .history-item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10rem;
+
+      header,
+      div.content {
+        position: relative;
+        z-index: 2;
+        margin-right: 3rem;
+        margin-left: 3rem;
+      }
+
+      header {
+        width: 34rem;
+
+        .number {
+          margin-bottom: 5rem;
+          font-size: 15rem;
+          font-family: $number-font;
+          font-weight: normal;
+          letter-spacing: -1.5rem;
+          line-height: 16.5rem;
+        }
+
+        em {
+          font-size: 4rem;
+          line-height: 4rem;
+        }
+      }
+
+      div.content {
+        margin-top: 3rem;
+        max-width: 48rem;
+
+        p:last-of-type {
+          margin-bottom: 5rem;
+        }
+
+        figure {
+          display: inline-block;
+          width: 100%;
+          height: 30rem;
+          background: #ddd;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      &:nth-child(odd) {
+        header {
+          text-align: right;
+        }
+      }
+      &:nth-child(even) {
+        header {
+          order: 2;
+        }
+        div.content {
+          text-align: right;
+        }
+      }
+    }
+
+    .award {
+      header {
+        margin: 0;
+        padding: 10rem;
+        width: 50%;
+        background: black;
+        color: white;
+      }
+      div.content {
+        margin: 0;
+        width: 50%;
+        max-width: 50%;
+
+        figure {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+div.close {
+  position: fixed;
+  height: 3rem;
+  width: 3rem;
+  top: 3.5rem;
+  right: -999rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+  &:hover {
+    &:before {
+      transform: rotate(135deg);
+    }
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
+  &:after,
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    width: 3rem;
+    height: 0.2rem;
+    background: white;
+    transition: all 250ms ease-in-out;
+    pointer-events: none;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}

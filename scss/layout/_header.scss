@@ -1,0 +1,17 @@
+header.main-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+  padding: 4rem 6rem 0;
+  @include smartphone {
+    background: white;
+    height: 5rem;
+    box-shadow: 0 0 10rem rgba(0,0,0,0.1);
+  }
+}
+
+header.page-header {
+  padding-top: 16rem;
+}
+

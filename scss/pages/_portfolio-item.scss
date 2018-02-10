@@ -1,0 +1,37 @@
+.post.category-portfolio {
+
+  header {
+    padding-top: 16rem;
+    margin-bottom: 8rem;
+
+    .page-width {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      h1 {
+        width: 100%;
+
+        a {
+          color: $body-font-color;
+          text-decoration: none;
+        }
+      }
+
+      div.introduction {
+        max-width: 64rem;
+      }
+
+      .tags {
+        margin-top: -3.4rem;
+        font-size: 1.3rem;
+
+        ul {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.vertical-name {
+  position: absolute;
+  left: 4rem;
+  top: 38.5rem;
+  transform: rotate(-90deg);
+  transform-origin: left top 0;
+  float: left;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  transition: opacity 500ms ease-in-out;
+
+  .menu-overlay & {
+    color: white;
+    z-index: 101;
+    opacity: 0;
+  }
+  .menu-overlay.activating &,
+  .menu-overlay.active & {
+    opacity: 1;
+  }
+  .menu-overlay.deactivating & {
+    opacity: 0;
+  }
+
+  @include smartphone {
+    display: none;
+  }
+}

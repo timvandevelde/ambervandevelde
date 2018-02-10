@@ -1,0 +1,94 @@
+.popup {
+  background: white;
+  margin: 0 auto;
+  padding: 5rem;
+  max-width: 100rem;
+
+  &#brand-session,
+  &#art-direction-en-design {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h2 {
+      margin: 0 0 4rem;
+      width: 100%;
+    }
+  }
+
+  &#brand-session .popup-list {
+    flex-basis: 47%;
+    margin-bottom: 2rem;
+  }
+
+  &#art-direction-en-design .popup-list {
+    flex-basis: 28%;
+    margin-bottom: 2rem;
+  }
+}
+
+.mfp-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  right: 3rem;
+  bottom: 3rem;
+  width: auto !important;
+  background: white;
+  box-shadow: 0.2rem 0.2rem 10rem rgba(0,0,0,0.1);
+
+  .mfp-close {
+    @extend div.close;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    opacity: 1;
+    font-size: 0;
+    color: white;
+    &:before,
+    &:after {
+      background: black;
+    }
+  }
+}
+
+.mfp-bg {
+  background: $section-color;
+}
+
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}

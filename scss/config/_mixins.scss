@@ -1,0 +1,13 @@
+@mixin page-width() {
+  margin: 0 auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  max-width: $page-width;
+}
+
+@mixin smartphone {
+  @media screen and (max-width: 479px) { @content; }
+}
+@mixin desktop {
+  @media screen and (min-width: 480px) { @content; }
+}
