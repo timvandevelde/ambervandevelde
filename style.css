@@ -1,7 +1,7 @@
 /**
  * Theme Name:       ambervandevelde
  * Theme URI:        http://www.timvandevelde.nl
- * Version:          0.1.6
+ * Version:          0.1.7
  * Description:      Theme for Amber
  * Author:           Tim van de Velde
  * GitHub Theme URI: https://github.com/timvandevelde/ambervandevelde
@@ -808,7 +808,7 @@ body.on-dark nav.main-navigation div.hamburger {
   opacity: 0.7;
 }
 section.colored {
-  background: #cdac4c;
+  background: #fed;
 }
 footer.main-footer {
   padding: 6rem 6rem 3rem 6rem;
@@ -939,7 +939,7 @@ section.full-size-title.white-on-black {
   color: white;
 }
 section.full-size-title.black-on-color {
-  background: #cdac4c;
+  background: #fed;
   color: black;
 }
 section.full-size-title h2 {
@@ -1067,7 +1067,7 @@ ul.plus-list li:before {
   background: black;
 }
 .mfp-bg {
-  background: #cdac4c;
+  background: #fed;
 }
 /* overlay at start */
 .mfp-fade.mfp-bg {
@@ -1307,7 +1307,7 @@ section.homepage-portfolio article.homepage-portfolio-item {
 section.homepage-portfolio article.homepage-portfolio-item figure {
   margin: 0 0 2rem;
   height: 70vh;
-  background: #c7a338;
+  background: #ffe1c4;
 }
 section.homepage-portfolio article.homepage-portfolio-item h4 {
   margin: 5rem 0 0;
@@ -1416,7 +1416,7 @@ article#over-mij section.history .award div.content figure {
   height: 100%;
 }
 article#services section.services {
-  background: #cdac4c;
+  background: #fed;
 }
 article#services section.services article.service {
   position: relative;
