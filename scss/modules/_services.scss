@@ -1,3 +1,18 @@
+section.services-introduction {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: white;
+  color: black;
+  padding: 12rem 2rem;
+  height: 70vh;
+
+  h1 {
+    @include page-width;
+  }
+}
+
 section.services {
   background: white;
 
