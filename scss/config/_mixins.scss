@@ -11,3 +11,22 @@
 @mixin desktop {
   @media screen and (min-width: 480px) { @content; }
 }
+
+@mixin line-hover($color, $thickness) {
+  position: relative;
+  &:hover:after{
+    transform: scaleX(1);
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0;
+    height: $thickness;
+    width: 100%;
+    background: $color;
+    transform: scaleX(0);
+    transform-origin: bottom left 0;
+    transition: transform 150ms ease-out;
+  }
+}

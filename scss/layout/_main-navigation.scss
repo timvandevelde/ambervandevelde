@@ -167,21 +167,6 @@ nav.main-navigation {
       li {
         margin: 1.5% 0;
         transform: translateY(5rem);
-        a:hover:after{
-          transform: scaleX(1);
-        }
-        a:after {
-          content: '';
-          position: absolute;
-          display: block;
-          bottom: 0;
-          height: 0.3rem;
-          width: 100%;
-          background: white;
-          transform: scaleX(0);
-          transform-origin: bottom left 0;
-          transition: transform 250ms ease-out;
-        }
 
         a {
           position: relative;
@@ -191,6 +176,7 @@ nav.main-navigation {
           color: white;
           line-height: 6rem;
           text-decoration: none;
+          @include line-hover(white, 0.3rem);
           @include smartphone {
             font-size: 3rem;
             line-height: 4rem;

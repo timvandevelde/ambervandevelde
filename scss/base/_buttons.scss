@@ -1,7 +1,8 @@
 button,
 .button {
+  position: relative;
   display: inline-block;
-  padding: 0.5rem 1.2rem 0.4rem;
+  padding: 0.6rem 2rem 0.4rem;
   border: 0.1rem solid black;
   text-transform: uppercase;
   font-size: 1.4rem;
@@ -9,14 +10,60 @@ button,
   color: $body-font-color;
   text-decoration: none;
   letter-spacing: 0.2rem;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: bottom left;
+    transition: transform 125ms ease-out;
+    width: 100%;
+    height: 100%;
+    background: $body-font-color;
+  }
   &:hover,
   &:focus {
     outline: none;
+    &:after {
+      transform: scaleY(1);
+    }
+
+    span {
+      color: white;
+    }
+  }
+  &.fill {
+    &:after {
+      transform-origin: top left;
+      transform: scaleY(1);
+    }
+    &:hover,
+    &:focus {
+      &:after {
+        transform: scaleY(0);
+      }
+
+      span {
+        color: $body-font-color;
+      }
+    }
+
+    span {
+      color: white;
+    }
+  }
+  span {
+    position: relative;
+    z-index: 2;
+    transition: color 125ms ease-out;
+    &:before {
+      margin: 0 1rem 0 0.3rem;
+      font-size: 120%;
+      vertical-align: middle;
+    }
   }
 
-  span:before {
-    margin: 0 1rem 0 0.3rem;
-    font-size: 120%;
-    vertical-align: middle;
-  }
 }

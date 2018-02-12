@@ -3,9 +3,10 @@ html {
 }
 
 body {
+  color: $body-font-color;
   font-family: $body-font-family;
   font-size: 1.6rem;
-  line-height: 2.7rem;
+  line-height: 2.5rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -82,5 +83,28 @@ span.underline {
 
 em {
   font-family: $emphasis-font-family;
+}
+
+a {
+  color: $body-font-color;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+blockquote {
+  margin: 1rem 0 2rem;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  font-weight: 500;
+}
+
+.super-big {
+  font-family: $heading-font-family;
+  font-size: 10rem;
+  font-weight: 900;
+  line-height: 9.5rem;
+  letter-spacing: -0.2rem;
+  text-transform: none;
+  white-space: nowrap;
 }
 

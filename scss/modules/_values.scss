@@ -1,0 +1,36 @@
+.values {
+  padding: 14rem 0;
+
+  .page-width {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    > figure {
+      flex-grow: 1;
+      min-width: 30rem;
+      min-height: 30rem;
+      background: desaturate(darken($sunlight,10), 0.15);
+    }
+
+    > blockquote {
+      display: flex;
+      align-items: center;
+      max-width: 39rem;
+    }
+
+    .value-list {
+      margin: 0 0 0 5rem;
+      flex-grow: 1;
+
+      ul {
+        li {
+          border-color: $body-font-color;
+          &:first-child {
+            border-top: 0.1rem solid $body-font-color;
+          }
+        }
+      }
+    }
+  }
+}

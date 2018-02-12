@@ -16,27 +16,37 @@ section.full-size-title {
     width: 100%;
     background: black;
   }
-
   &.white-on-black {
     background: black;
     color: white;
   }
-
-  &.black-on-color {
-    background: $section-color;
+  &.sunlight {
+    background: $sunlight;
+    color: black;
+  }
+  &.peach {
+    background: $peach;
+    color: black;
+  }
+  &.moss {
+    background: $moss;
     color: black;
   }
 
+
+
   h2 {
-    max-width: 83rem;
-    font-size: 6.5rem;
-    line-height: 7.5rem;
-    font-weight: bold;
+    max-width: 96rem;
+    font-size: 6.3rem;
+    line-height: 7.3rem;
+    font-weight: 900;
     .emphasis {
       margin: 0 1.5rem 0 1rem;
       font-family: $emphasis-font-family;
       font-weight: normal;
-      font-size: 7.5rem;
+      font-size: 9.7rem;
+      line-height: 7.3rem;
+      letter-spacing: -0.1rem;
     }
   }
 }

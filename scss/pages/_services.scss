@@ -1,103 +1,119 @@
-article#services {
+section.services {
+  background: white;
 
-  section.services {
-    background: $section-color;
+  article.service {
+    padding: 14rem 0;
+    position: relative;
+    &.service-right {
+      header {
+        text-align: right;
+        &:after {
+          top: 15rem;
+          left: 50%;
+          right: 0;
+        }
+      }
+      .content {
+        blockquote {
+          display: flex;
+          justify-content: center;
+          max-width: 100%;
+          span {
+            width: 100%;
+            max-width: 44rem;
+            flex-shrink: 1;
+          }
+          &:after {
+            content: "";
+            display: block;
+            flex-shrink: 100;
+            width: 15rem;
+          }
+        }
+      }
+    }
+    &.service-left {
+      header:after {
+        top: 17rem;
+        left: 0;
+        right: 50%;
+      }
+      .content {
+        figure {
+          align-self: flex-end;
+        }
+      }
+    }
 
-    article.service {
-      position: relative;
-      display: flex;
-      justify-content: center;
+    header {
+      margin: 0 auto;
+      padding: 0 3rem;
+      max-width: 106rem;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 1;
+        background: $snow;
+        height: 34rem;
+      }
 
-      header,
-      div.content {
+      h2,
+      em {
         position: relative;
         z-index: 2;
-        margin-right: 3rem;
-        margin-left: 3rem;
       }
 
-      header {
-        width: 66rem;
-
-        h2 {
-          margin-bottom: 4rem;
-          font-size: 10rem;
-          font-weight: 900;
-          letter-spacing: -0.2rem;
-          line-height: 8.2rem;
-
-          span {
-            font-size: 8rem;
-          }
-        }
-
-        em {
-          display: block;
-          margin-bottom: 6rem;
-          font-family: $emphasis-font-family;
-          font-size: 4rem;
-        }
-
-        figure {
-          display: inline-block;
-          width: 100%;
-          max-width: 50rem;
-          height: 30rem;
-          background: #ddd;
-
-          img {
-            width: 100%;
-          }
-        }
-      }
-
-      div.content {
-        margin-top: 10.5rem;
-        max-width: 44rem;
-
-        a.button {
-          margin-top: 1.5rem;
-        }
+      em {
+        display: block;
+        margin-bottom: 6rem;
+        font-family: $emphasis-font-family;
+        font-size: 4rem;
       }
     }
-    article.service-branding {
-      padding: 12rem 0 6rem;
-      &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 15%;
-        background: #F3F2F0;
-        width: 30%;
-        height: 50%;
-        z-index: 1;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 0 3rem;
+      margin: 5rem auto;
+      max-width: 96rem;
+
+      figure {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 5rem;
+        padding-top: 60%;
+        width: 100%;
+        max-width: 68.5rem;
+        background: darken($snow,20);
       }
 
-      header {
-        text-align: right;
-      }
-    }
-    article.service-artdirection {
-      padding: 6rem 0 16rem;
-      &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: 28.5%;
-        background: #F3F2F0;
-        width: 35%;
-        height: 40%;
-        z-index: 1;
+      p {
+        text-align: justify;
+        &.call-to-action {
+          margin: 1rem 0 3.5rem;
+          font-weight: bold;
+        }
       }
 
-      header {
-        order: 2;
+      p,
+      h3,
+      ul,
+      blockquote {
+        align-self: center;
+        width: 100%;
+        max-width: 47rem;
       }
 
-      div.content {
-        text-align: right;
+      h3 {
+        margin: 3rem 0 2rem;
+        font-family: $heading-font-family;
+        font-size: 5rem;
+        font-weight: 900;
+        letter-spacing: -0.1rem;
+        line-height: 5.3rem;
+        text-transform: none;
       }
     }
   }

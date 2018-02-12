@@ -1,5 +1,11 @@
 section {
-  &.colored {
-    background: $section-color;
+  &.sunlight {
+    background: $sunlight;
+  }
+  &.peach {
+    background: $peach;
+  }
+  &.moss {
+    background: $moss;
   }
 }

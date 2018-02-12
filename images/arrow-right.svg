@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="7px" viewBox="0 0 11 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>only arrow right</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-706.000000, -4057.000000)" stroke-linecap="square">
+        <g id="over-mij" transform="translate(0.000000, 3829.000000)" stroke="#000000">
+            <g id="Group" transform="translate(700.000000, 143.000000)">
+                <g id="only-arrow-right" transform="translate(1.000000, 78.000000)">
+                    <g id="arrow-right" transform="translate(5.000000, 7.000000)">
+                        <path d="M0.5,3.5 L9.5,3.5" id="Line"></path>
+                        <path d="M6.5,0.5 L10.5,3.5" id="Line-3"></path>
+                        <path d="M6.5,3.5 L10.5,6.5" id="Line-3" transform="translate(8.500000, 5.000000) scale(-1, 1) translate(-8.500000, -5.000000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
