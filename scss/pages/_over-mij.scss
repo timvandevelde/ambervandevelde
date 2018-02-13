@@ -1,99 +1,124 @@
-article#over-mij {
+section.full-size-photo {
+  height: 90vh;
+  background: #666 url("images/over-mij.jpg") no-repeat;
+  background-size: cover;
 
-  section.full-size-photo {
-    figure {
-      height: 80vh;
-      background: #eee;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: left;
+
+  h1 {
+    @include page-width;
+    margin-bottom: 10rem;
+    color: white;
   }
+}
 
-  section.history {
-    padding: 10rem 0;
+section.history {
+  padding: 10rem 0;
 
-    .history-item {
-      position: relative;
+  .history-item {
+    position: relative;
+    margin-bottom: 5rem;
+    @include desktop {
       display: flex;
       justify-content: center;
       margin-bottom: 10rem;
+    }
+    &:before,
+    &:after{
+      content: "";
+      display: block;
+      flex-shrink: 100;
+    }
+    &.history-item-2:before { width: 10%; }
+    &.history-item-2:after { width: 30%; }
 
-      header,
-      div.content {
-        position: relative;
-        z-index: 2;
-        margin-right: 3rem;
-        margin-left: 3rem;
+    &.history-item-3:before { width: 25%; }
+    &.history-item-3:after { width: 15%; }
+
+    &.history-item-5:before { width: 10%; }
+    &.history-item-5:after { width: 30%; }
+
+    &.history-item-6:before { width: 30%; }
+    &.history-item-6:after { width: 10%; }
+
+    header,
+    div.content {
+      position: relative;
+      z-index: 2;
+      margin-right: 3rem;
+      margin-left: 3rem;
+    }
+
+    header {
+      width: 34rem;
+      text-align: right;
+
+      .number {
+        margin-bottom: 2rem;
+        font-size: 15rem;
+        font-family: $number-font;
+        font-weight: normal;
+        letter-spacing: -1.5rem;
+        line-height: 16.5rem;
       }
 
-      header {
-        width: 34rem;
-
-        .number {
-          margin-bottom: 5rem;
-          font-size: 15rem;
-          font-family: $number-font;
-          font-weight: normal;
-          letter-spacing: -1.5rem;
-          line-height: 16.5rem;
-        }
-
-        em {
-          font-size: 4rem;
-          line-height: 4rem;
-        }
-      }
-
-      div.content {
-        margin-top: 3rem;
-        max-width: 48rem;
-
-        p:last-of-type {
-          margin-bottom: 5rem;
-        }
-
-        figure {
-          display: inline-block;
-          width: 100%;
-          height: 30rem;
-          background: #ddd;
-
-          img {
-            width: 100%;
-          }
-        }
-      }
-
-      &:nth-child(odd) {
-        header {
-          text-align: right;
-        }
-      }
-      &:nth-child(even) {
-        header {
-          order: 2;
-        }
-        div.content {
-          text-align: right;
-        }
+      em {
+        font-size: 4rem;
+        line-height: 4rem;
       }
     }
 
-    .award {
-      header {
-        margin: 0;
-        padding: 10rem;
-        width: 50%;
-        background: black;
-        color: white;
-      }
-      div.content {
-        margin: 0;
-        width: 50%;
-        max-width: 50%;
+    div.content {
+      margin-top: 3rem;
+      max-width: 48rem;
 
-        figure {
+      p {
+        text-align: justify;
+      }
+
+      p:last-of-type {
+        margin-bottom: 5rem;
+      }
+
+      figure {
+        display: inline-block;
+        width: 100%;
+        height: 30rem;
+        background: #ddd;
+
+        img {
           width: 100%;
-          height: 100%;
         }
+      }
+    }
+  }
+
+  .award {
+    header {
+      align-self: flex-start;
+      margin: 0 2rem;
+      padding: 5rem 5rem 5rem 10rem;
+      width: 50rem;
+      background: black;
+      color: white;
+      text-align: left;
+
+      .number {
+        margin-left: -5rem;
+      }
+    }
+    div.content {
+      margin: 28rem 2rem 0;
+      width: 100%;
+      max-width: 40rem;
+      height: 32rem;
+
+      figure {
+        width: 100%;
+        height: 100%;
       }
     }
   }

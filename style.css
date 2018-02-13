@@ -881,6 +881,10 @@ section.moss {
 section.snow {
   background: #f3f2f0;
 }
+section.black {
+  background: black;
+  color: white;
+}
 footer.main-footer {
   padding: 5rem;
   background: white;
@@ -1007,10 +1011,6 @@ div.close:after, .mfp-content .mfp-close:after {
 }
 section.color-quote {
   padding: 10%;
-}
-section.color-quote.black {
-  background: black;
-  color: white;
 }
 section.color-quote p {
   font-size: 2.4rem;
@@ -1613,78 +1613,127 @@ section.homepage-portfolio > a {
   margin: 0;
   list-style: none;
 }
-article#over-mij section.full-size-photo figure {
-  height: 80vh;
-  background: #eee;
+section.full-size-photo {
+  height: 90vh;
+  background: #666 url("images/over-mij.jpg") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: left;
 }
-article#over-mij section.history {
+section.full-size-photo h1 {
+  margin: 0 auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  width: 100%;
+  max-width: 96rem;
+  margin-bottom: 10rem;
+  color: white;
+}
+section.history {
   padding: 10rem 0;
 }
-article#over-mij section.history .history-item {
+section.history .history-item {
   position: relative;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
-article#over-mij section.history .history-item header, article#over-mij section.history .history-item div.content {
+@media screen and (min-width: 480px) {
+  section.history .history-item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+  }
+}
+section.history .history-item:before, section.history .history-item:after {
+  content: "";
+  display: block;
+  flex-shrink: 100;
+}
+section.history .history-item.history-item-2:before {
+  width: 10%;
+}
+section.history .history-item.history-item-2:after {
+  width: 30%;
+}
+section.history .history-item.history-item-3:before {
+  width: 25%;
+}
+section.history .history-item.history-item-3:after {
+  width: 15%;
+}
+section.history .history-item.history-item-5:before {
+  width: 10%;
+}
+section.history .history-item.history-item-5:after {
+  width: 30%;
+}
+section.history .history-item.history-item-6:before {
+  width: 30%;
+}
+section.history .history-item.history-item-6:after {
+  width: 10%;
+}
+section.history .history-item header, section.history .history-item div.content {
   position: relative;
   z-index: 2;
   margin-right: 3rem;
   margin-left: 3rem;
 }
-article#over-mij section.history .history-item header {
+section.history .history-item header {
   width: 34rem;
+  text-align: right;
 }
-article#over-mij section.history .history-item header .number {
-  margin-bottom: 5rem;
+section.history .history-item header .number {
+  margin-bottom: 2rem;
   font-size: 15rem;
   font-family: 'Pistilli', serif;
   font-weight: normal;
   letter-spacing: -1.5rem;
   line-height: 16.5rem;
 }
-article#over-mij section.history .history-item header em {
+section.history .history-item header em {
   font-size: 4rem;
   line-height: 4rem;
 }
-article#over-mij section.history .history-item div.content {
+section.history .history-item div.content {
   margin-top: 3rem;
   max-width: 48rem;
 }
-article#over-mij section.history .history-item div.content p:last-of-type {
+section.history .history-item div.content p {
+  text-align: justify;
+}
+section.history .history-item div.content p:last-of-type {
   margin-bottom: 5rem;
 }
-article#over-mij section.history .history-item div.content figure {
+section.history .history-item div.content figure {
   display: inline-block;
   width: 100%;
   height: 30rem;
   background: #ddd;
 }
-article#over-mij section.history .history-item div.content figure img {
+section.history .history-item div.content figure img {
   width: 100%;
 }
-article#over-mij section.history .history-item:nth-child(odd) header {
-  text-align: right;
-}
-article#over-mij section.history .history-item:nth-child(even) header {
-  order: 2;
-}
-article#over-mij section.history .history-item:nth-child(even) div.content {
-  text-align: right;
-}
-article#over-mij section.history .award header {
-  margin: 0;
-  padding: 10rem;
-  width: 50%;
+section.history .award header {
+  align-self: flex-start;
+  margin: 0 2rem;
+  padding: 5rem 5rem 5rem 10rem;
+  width: 50rem;
   background: black;
   color: white;
+  text-align: left;
 }
-article#over-mij section.history .award div.content {
-  margin: 0;
-  width: 50%;
-  max-width: 50%;
+section.history .award header .number {
+  margin-left: -5rem;
 }
-article#over-mij section.history .award div.content figure {
+section.history .award div.content {
+  margin: 28rem 2rem 0;
+  width: 100%;
+  max-width: 40rem;
+  height: 32rem;
+}
+section.history .award div.content figure {
   width: 100%;
   height: 100%;
 }

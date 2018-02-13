@@ -11,4 +11,8 @@ section {
   &.snow {
     background: $snow;
   }
+  &.black {
+    background: black;
+    color: white;
+  }
 }
