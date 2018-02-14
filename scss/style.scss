@@ -19,6 +19,7 @@
 @import "base/typography";
 
 @import "layout/body";
+@import "layout/category";
 @import "layout/content";
 @import "layout/grid";
 @import "layout/header";
@@ -31,15 +32,14 @@
 @import "modules/color-quote";
 @import "modules/full-size-title";
 @import "modules/logo";
-@import "modules/plus-list";
 @import "modules/popup";
 @import "modules/services";
+@import "modules/services-cta";
 @import "modules/services-overview";
 @import "modules/social-menu";
 @import "modules/values";
 @import "modules/vertical-name";
 
-@import "pages/category";
 @import "pages/homepage";
 @import "pages/portfolio-item";
 @import "pages/over-mij";

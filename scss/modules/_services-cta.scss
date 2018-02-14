@@ -1,0 +1,40 @@
+.services-cta {
+  padding: 10rem 0;
+  background: $snow;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+
+  h3 {
+    margin: 0 0 5rem;
+    width: 100%;
+  }
+
+  article {
+    margin: 1.5rem;
+    max-width: 40rem;
+    min-height: 35rem;
+    flex-basis: 0;
+    flex-grow: 1;
+
+    figure {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5rem;
+      height: 100%;
+      background-color: darken($snow, 10);
+      background-size: cover;
+
+      h4 a {
+        font-family: $heading-font-family;
+        font-size: 5rem;
+        text-transform: none;
+        font-weight: 900;
+        text-decoration: none;
+        letter-spacing: -0.1rem;
+      }
+    }
+  }
+}
