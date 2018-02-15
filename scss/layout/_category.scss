@@ -23,11 +23,11 @@ body.category {
     padding-bottom: 15rem;
 
     .gutter-sizer {
-      width: 10%;
+      width: 12%;
     }
 
     article.masonry-article {
-      width: calc(45% - 2rem);
+      width: calc(44% - 4rem);
       &:nth-of-type(2) {
         margin-top: 20rem;
       }

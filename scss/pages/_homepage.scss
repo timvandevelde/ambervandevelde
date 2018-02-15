@@ -46,6 +46,9 @@ section.homepage-introduction {
 
       h1 {
         width: 140%;
+        @include smartphone {
+          width: 100%;
+        }
       }
     }
 
@@ -54,10 +57,7 @@ section.homepage-introduction {
       flex-basis: 44rem;
       align-self: flex-start;
       @include smartphone {
-        position: absolute;
-        top: 10%;
-        right: -25%;
-        width: 75%;
+        margin: -20% -30% 20% 30%;
       }
 
       img {
@@ -86,21 +86,40 @@ section.homepage-introduction {
 section.homepage-portfolio {
   padding: 3rem;
   text-align: center;
+  @include smartphone {
+    padding-top: 8rem;
+  }
 
   section.colored {
-    padding: 8rem 0 4rem;
+    padding: 3rem;
     background-color: $snow;
     text-align: left;
+    @include desktop {
+      padding: 8rem 0 4rem;
+    }
+  }
+
+  .page-width {
+    @include smartphone {
+      padding: 0;
+    }
   }
 
   article.homepage-portfolio-item {
     margin: 5rem auto;
     width: calc(100% - 24rem);
+    @include smartphone {
+      margin: 3rem auto;
+      width: 100%;
+    }
 
     figure {
       margin: 0 0 2rem;
-      height: 70vh;
+      height: 30rem;
       background: darken($snow, 5);
+      @include desktop {
+        height: 70vh;
+      }
     }
 
     h4 {

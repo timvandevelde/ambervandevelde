@@ -5,8 +5,9 @@ section.services-introduction {
   justify-content: flex-end;
   background: white;
   color: black;
-  padding: 12rem 2rem;
-  height: 70vh;
+  padding: 10rem 2rem;
+  height: 40vh;
+  min-height: 43rem;
 
   h1 {
     @include page-width;

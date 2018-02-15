@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 <section id="content" role="main">
   <div class="vertical-name">Amber van de Velde</div>
-  <header class="header category-header">
+  <header class="header category-header scroll-section">
     <div class="page-width">
       <h1 class="entry-title super-big"><?php single_cat_title(); ?></h1>
       <?php if ( '' != category_description() ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . category_description() . '</div>' ); ?>
     </div>
   </header>
   <section class="articles">
-    <div class="page-width masonry-articles">
+    <div class="page-width masonry-articles scroll-section">
       <div class="gutter-sizer"></div>
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class('masonry-article'); ?>>
@@ -31,7 +31,7 @@
       <?php endwhile; endif; ?>
     </div>
   </section>
-  <section class="services-cta">
+  <section class="services-cta scroll-section">
     <h3>Wat ik voor je kan betekenen</h3>
 
     <?php

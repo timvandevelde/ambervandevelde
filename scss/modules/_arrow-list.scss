@@ -9,5 +9,8 @@ ul.arrow-list {
     border-bottom: 0.1rem solid rgba($body-font-color, 0.2);
     background: url('images/arrow-right.svg') 0 2.1rem no-repeat;
     text-align: justify;
+    @include smartphone {
+      margin-right: 0;
+    }
   }
 }

@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <section id="content" role="main">
+  <div class="vertical-name">Amber van de Velde</div>
   <header class="header category-header">
     <div class="page-width">
       <h1 class="entry-title"><?php single_cat_title(); ?></h1>

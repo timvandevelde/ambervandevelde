@@ -34,6 +34,10 @@ section.services-overview {
     display: flex;
     justify-content: center;
     padding: 5rem 0 10rem;
+    @include smartphone {
+      position: relative;
+      overflow: hidden;
+    }
     &.branding {
       .content {
         margin-top: 10rem;
@@ -48,6 +52,9 @@ section.services-overview {
 
       figure {
         margin-top: 10rem;
+        @include smartphone {
+          left: 60%;
+        }
       }
     }
     &.content-social-media {
@@ -79,6 +86,9 @@ section.services-overview {
       max-width: 53rem;
       min-height: 38rem;
       background: $snow;
+      @include smartphone {
+        position: absolute;
+      }
     }
   }
 }

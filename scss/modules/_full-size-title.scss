@@ -6,8 +6,11 @@ section.full-size-title {
   align-items: center;
   background: white;
   color: black;
-  padding: 12rem 2rem;
+  padding: 12rem 0;
   height: 100vh;
+  @include smartphone {
+    height: auto;
+  }
   &:after {
     content: '';
     position: absolute;
@@ -33,8 +36,6 @@ section.full-size-title {
     color: black;
   }
 
-
-
   h2 {
     max-width: 96rem;
     font-size: 6.3rem;
@@ -47,6 +48,14 @@ section.full-size-title {
       font-size: 9.7rem;
       line-height: 7.3rem;
       letter-spacing: -0.1rem;
+    }
+    @include smartphone {
+      font-size: 4rem;
+      line-height: 5rem;
+      .emphasis {
+        font-size: 6rem;
+        line-height: 5rem;
+      }
     }
   }
 }

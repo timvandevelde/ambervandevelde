@@ -501,10 +501,19 @@ h1 {
 }
 @media screen and (max-width: 479px) {
   h1 {
-    font-size: 3rem;
-    line-height: 3.2rem;
+    font-size: 4rem;
+    line-height: 4.2rem;
     margin: 0 0 1.5rem;
   }
+}
+h1.super-big {
+  font-family: 'Playfair-Display', sans-serif;
+  font-size: 10rem;
+  font-weight: 900;
+  line-height: 9.5rem;
+  letter-spacing: -0.2rem;
+  text-transform: none;
+  white-space: nowrap;
 }
 h2 {
   margin: 0 0 2.5rem;
@@ -521,6 +530,15 @@ h2 {
     margin: 0 0 1.5rem;
   }
 }
+h2.super-big {
+  font-family: 'Playfair-Display', sans-serif;
+  font-size: 8rem;
+  font-weight: 900;
+  line-height: 7.5rem;
+  letter-spacing: -0.2rem;
+  text-transform: none;
+  white-space: nowrap;
+}
 h3 {
   margin: 0 0 1.6rem;
   font-size: 2.2rem;
@@ -528,6 +546,21 @@ h3 {
   font-weight: bold;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
+}
+h3.super-big {
+  font-family: 'Playfair-Display', sans-serif;
+  font-size: 6.5rem;
+  font-weight: 900;
+  line-height: 6rem;
+  letter-spacing: -0.2rem;
+  text-transform: none;
+  white-space: nowrap;
+}
+@media screen and (max-width: 479px) {
+  h3.super-big {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
 }
 h4 {
   margin: 0 0 1.6rem;
@@ -571,15 +604,6 @@ blockquote {
   line-height: 3.6rem;
   font-weight: 500;
 }
-.super-big {
-  font-family: 'Playfair-Display', sans-serif;
-  font-size: 10rem;
-  font-weight: 900;
-  line-height: 9.5rem;
-  letter-spacing: -0.2rem;
-  text-transform: none;
-  white-space: nowrap;
-}
 html {
   height: 100%;
   box-sizing: border-box;
@@ -614,10 +638,10 @@ body.category .masonry-articles {
   padding-bottom: 15rem;
 }
 body.category .masonry-articles .gutter-sizer {
-  width: 10%;
+  width: 12%;
 }
 body.category .masonry-articles article.masonry-article {
-  width: calc(45% - 2rem);
+  width: calc(44% - 4rem);
 }
 body.category .masonry-articles article.masonry-article:nth-of-type(2) {
   margin-top: 20rem;
@@ -679,9 +703,9 @@ body.category .masonry-articles article.masonry-article .description a p {
 }
 .page-width {
   margin: 0 auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  max-width: 102rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  max-width: 108rem;
 }
 .page-width.small {
   max-width: 82rem;
@@ -1036,6 +1060,11 @@ ul.arrow-list li {
   background: url('images/arrow-right.svg') 0 2.1rem no-repeat;
   text-align: justify;
 }
+@media screen and (max-width: 479px) {
+  ul.arrow-list li {
+    margin-right: 0;
+  }
+}
 div.close, .mfp-content .mfp-close {
   position: fixed;
   height: 3rem;
@@ -1086,8 +1115,13 @@ section.full-size-title {
   align-items: center;
   background: white;
   color: black;
-  padding: 12rem 2rem;
+  padding: 12rem 0;
   height: 100vh;
+}
+@media screen and (max-width: 479px) {
+  section.full-size-title {
+    height: auto;
+  }
 }
 section.full-size-title:after {
   content: '';
@@ -1127,6 +1161,16 @@ section.full-size-title h2 .emphasis {
   line-height: 7.3rem;
   letter-spacing: -0.1rem;
 }
+@media screen and (max-width: 479px) {
+  section.full-size-title h2 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+  section.full-size-title h2 .emphasis {
+    font-size: 6rem;
+    line-height: 5rem;
+  }
+}
 figure.logo {
   display: inline-block;
   transition: opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -1150,7 +1194,7 @@ body.on-dark figure.logo svg #wit {
   fill: white;
 }
 body.sticky header.main-header figure.logo, body.sticky .menu-overlay figure.logo {
-  transform: scale(0.6) translate(-5rem, -2.5rem);
+  transform: scale(0.6) translate(-2rem, -0.5rem);
 }
 @media screen and (max-width: 479px) {
 }
@@ -1260,15 +1304,16 @@ section.services-introduction {
   justify-content: flex-end;
   background: white;
   color: black;
-  padding: 12rem 2rem;
-  height: 70vh;
+  padding: 10rem 2rem;
+  height: 40vh;
+  min-height: 43rem;
 }
 section.services-introduction h1 {
   margin: 0 auto;
   padding-right: 2rem;
   padding-left: 2rem;
   width: 100%;
-  max-width: 102rem;
+  max-width: 108rem;
 }
 section.services {
   background: white;
@@ -1441,6 +1486,12 @@ section.services-overview article.service-thumb {
   justify-content: center;
   padding: 5rem 0 10rem;
 }
+@media screen and (max-width: 479px) {
+  section.services-overview article.service-thumb {
+    position: relative;
+    overflow: hidden;
+  }
+}
 section.services-overview article.service-thumb.branding .content {
   margin-top: 10rem;
   margin-left: 20%;
@@ -1451,6 +1502,11 @@ section.services-overview article.service-thumb.digital-design .content {
 }
 section.services-overview article.service-thumb.digital-design figure {
   margin-top: 10rem;
+}
+@media screen and (max-width: 479px) {
+  section.services-overview article.service-thumb.digital-design figure {
+    left: 60%;
+  }
 }
 section.services-overview article.service-thumb.content-social-media .content {
   max-width: 44rem;
@@ -1475,6 +1531,11 @@ section.services-overview article.service-thumb figure {
   max-width: 53rem;
   min-height: 38rem;
   background: #f3f2f0;
+}
+@media screen and (max-width: 479px) {
+  section.services-overview article.service-thumb figure {
+    position: absolute;
+  }
 }
 div.menu-social {
   position: relative;
@@ -1519,6 +1580,11 @@ div.menu-social a.icon-facebook {
   margin: 0 0 0 5rem;
   flex-grow: 1;
 }
+@media screen and (max-width: 479px) {
+  .values .page-width .value-list {
+    margin: 2rem 0;
+  }
+}
 .values .page-width .value-list ul li {
   border-color: #000;
 }
@@ -1529,6 +1595,7 @@ div.menu-social a.icon-facebook {
   position: absolute;
   left: 4rem;
   top: 38.5rem;
+  z-index: 2;
   transform: rotate(-90deg);
   transform-origin: left top 0;
   float: left;
@@ -1607,6 +1674,11 @@ section.homepage-introduction .vertical-wrapper div.content {
 section.homepage-introduction .vertical-wrapper div.content h1 {
   width: 140%;
 }
+@media screen and (max-width: 479px) {
+  section.homepage-introduction .vertical-wrapper div.content h1 {
+    width: 100%;
+  }
+}
 section.homepage-introduction .vertical-wrapper figure {
   position: relative;
   flex-basis: 44rem;
@@ -1614,10 +1686,7 @@ section.homepage-introduction .vertical-wrapper figure {
 }
 @media screen and (max-width: 479px) {
   section.homepage-introduction .vertical-wrapper figure {
-    position: absolute;
-    top: 10%;
-    right: -25%;
-    width: 75%;
+    margin: -20% -30% 20% 30%;
   }
 }
 section.homepage-introduction .vertical-wrapper figure img {
@@ -1644,19 +1713,45 @@ section.homepage-portfolio {
   padding: 3rem;
   text-align: center;
 }
+@media screen and (max-width: 479px) {
+  section.homepage-portfolio {
+    padding-top: 8rem;
+  }
+}
 section.homepage-portfolio section.colored {
-  padding: 8rem 0 4rem;
+  padding: 3rem;
   background-color: #f3f2f0;
   text-align: left;
+}
+@media screen and (min-width: 480px) {
+  section.homepage-portfolio section.colored {
+    padding: 8rem 0 4rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  section.homepage-portfolio .page-width {
+    padding: 0;
+  }
 }
 section.homepage-portfolio article.homepage-portfolio-item {
   margin: 5rem auto;
   width: calc(100% - 24rem);
 }
+@media screen and (max-width: 479px) {
+  section.homepage-portfolio article.homepage-portfolio-item {
+    margin: 3rem auto;
+    width: 100%;
+  }
+}
 section.homepage-portfolio article.homepage-portfolio-item figure {
   margin: 0 0 2rem;
-  height: 70vh;
+  height: 30rem;
   background: #e8e6e2;
+}
+@media screen and (min-width: 480px) {
+  section.homepage-portfolio article.homepage-portfolio-item figure {
+    height: 70vh;
+  }
 }
 section.homepage-portfolio article.homepage-portfolio-item h4 {
   margin: 3rem 0 0;
@@ -1706,7 +1801,7 @@ section.full-size-photo h1 {
   padding-right: 2rem;
   padding-left: 2rem;
   width: 100%;
-  max-width: 102rem;
+  max-width: 108rem;
   margin-bottom: 10rem;
   color: white;
 }
