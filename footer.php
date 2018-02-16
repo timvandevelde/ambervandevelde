@@ -38,7 +38,7 @@
 </div>
 </footer>
 <?php wp_footer(); ?>
-<script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/scripts/packery.pkgd.min.js" type="text/javascript"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/scripts/jquery.easing.min.js" type="text/javascript"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/scripts/scrollify.js" type="text/javascript"></script>
 <!-- <script src="<?php echo get_stylesheet_directory_uri(); ?>/scripts/jquery.magnific-popup.min.js" type="text/javascript"></script> -->

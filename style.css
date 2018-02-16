@@ -634,35 +634,45 @@ body.category .category-header .page-width h1 {
   margin-bottom: 10rem;
 }
 body.category .masonry-articles {
-  padding-top: 11rem;
-  padding-bottom: 15rem;
+  padding-top: 8%;
+  padding-bottom: 12%;
 }
 body.category .masonry-articles .gutter-sizer {
-  width: 12%;
+  width: 5%;
+}
+@media screen and (min-width: 800px) {
+  body.category .masonry-articles .gutter-sizer {
+    width: 12%;
+  }
 }
 body.category .masonry-articles article.masonry-article {
-  width: calc(44% - 4rem);
+  width: calc(100% - 8rem);
 }
-body.category .masonry-articles article.masonry-article:nth-of-type(2) {
-  margin-top: 20rem;
-}
-body.category .masonry-articles article.masonry-article:nth-of-type(1) figure img {
-  height: 53rem;
-}
-body.category .masonry-articles article.masonry-article:nth-of-type(2) figure img {
-  height: 50rem;
-}
-body.category .masonry-articles article.masonry-article:nth-of-type(3) figure img {
-  height: 60rem;
-}
-body.category .masonry-articles article.masonry-article:nth-of-type(4) figure img {
-  height: 31rem;
-}
-body.category .masonry-articles article.masonry-article:nth-of-type(5) figure img {
-  height: 46rem;
-}
-body.category .masonry-articles article.masonry-article:nth-of-type(6) figure img {
-  height: 41rem;
+@media screen and (min-width: 800px) {
+  body.category .masonry-articles article.masonry-article {
+    width: calc(44% - 4rem);
+  }
+  body.category .masonry-articles article.masonry-article:nth-of-type(2) {
+    margin-top: 20rem;
+  }
+  body.category .masonry-articles article.masonry-article:nth-of-type(1) figure img {
+    height: 53rem;
+  }
+  body.category .masonry-articles article.masonry-article:nth-of-type(2) figure img {
+    height: 50rem;
+  }
+  body.category .masonry-articles article.masonry-article:nth-of-type(3) figure img {
+    height: 60rem;
+  }
+  body.category .masonry-articles article.masonry-article:nth-of-type(4) figure img {
+    height: 31rem;
+  }
+  body.category .masonry-articles article.masonry-article:nth-of-type(5) figure img {
+    height: 46rem;
+  }
+  body.category .masonry-articles article.masonry-article:nth-of-type(6) figure img {
+    height: 41rem;
+  }
 }
 body.category .masonry-articles article.masonry-article figure img {
   width: 100%;
@@ -1055,7 +1065,7 @@ ul.arrow-list {
 }
 ul.arrow-list li {
   margin-right: 2rem;
-  padding: 1.4rem 0 1.2rem 3rem;
+  padding: 1.4rem 1rem 1.2rem 3rem;
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
   background: url('images/arrow-right.svg') 0 2.1rem no-repeat;
   text-align: justify;
@@ -1566,6 +1576,7 @@ div.menu-social a.icon-facebook {
   justify-content: space-around;
 }
 .values .page-width > figure {
+  display: none;
   flex-grow: 1;
   min-width: 30rem;
   min-height: 30rem;
@@ -1578,7 +1589,6 @@ div.menu-social a.icon-facebook {
 }
 .values .page-width .value-list {
   margin: 0 0 0 5rem;
-  flex-grow: 1;
 }
 @media screen and (max-width: 479px) {
   .values .page-width .value-list {
@@ -1616,7 +1626,7 @@ div.menu-social a.icon-facebook {
 .menu-overlay.deactivating .vertical-name {
   opacity: 0;
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 1120px) {
   .vertical-name {
     display: none;
   }
@@ -1723,7 +1733,7 @@ section.homepage-portfolio section.colored {
   background-color: #f3f2f0;
   text-align: left;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 800px) {
   section.homepage-portfolio section.colored {
     padding: 8rem 0 4rem;
   }
@@ -1748,7 +1758,7 @@ section.homepage-portfolio article.homepage-portfolio-item figure {
   height: 30rem;
   background: #e8e6e2;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 800px) {
   section.homepage-portfolio article.homepage-portfolio-item figure {
     height: 70vh;
   }
@@ -1812,7 +1822,7 @@ section.history .history-item {
   position: relative;
   margin-bottom: 5rem;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 800px) {
   section.history .history-item {
     display: flex;
     justify-content: center;

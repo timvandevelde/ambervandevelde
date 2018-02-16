@@ -17,26 +17,31 @@ body.category {
     }
   }
 
-
   .masonry-articles {
-    padding-top: 11rem;
-    padding-bottom: 15rem;
+    padding-top: 8%;
+    padding-bottom: 12%;
 
     .gutter-sizer {
-      width: 12%;
+      width: 5%;
+      @include tablet-and-desktop {
+        width: 12%;
+      }
     }
 
     article.masonry-article {
-      width: calc(44% - 4rem);
-      &:nth-of-type(2) {
-        margin-top: 20rem;
+      width: calc(100% - 8rem);
+      @include tablet-and-desktop {
+        width: calc(44% - 4rem);
+        &:nth-of-type(2) {
+          margin-top: 20rem;
+        }
+        &:nth-of-type(1) figure img { height: 53rem; }
+        &:nth-of-type(2) figure img { height: 50rem; }
+        &:nth-of-type(3) figure img { height: 60rem; }
+        &:nth-of-type(4) figure img { height: 31rem; }
+        &:nth-of-type(5) figure img { height: 46rem; }
+        &:nth-of-type(6) figure img { height: 41rem; }
       }
-      &:nth-of-type(1) figure img { height: 53rem; }
-      &:nth-of-type(2) figure img { height: 50rem; }
-      &:nth-of-type(3) figure img { height: 60rem; }
-      &:nth-of-type(4) figure img { height: 31rem; }
-      &:nth-of-type(5) figure img { height: 46rem; }
-      &:nth-of-type(6) figure img { height: 41rem; }
 
       figure {
         img {

@@ -24,8 +24,10 @@
   .menu-overlay.deactivating & {
     opacity: 0;
   }
-
-  @include smartphone {
+}
+@media screen and (max-width: 1120px) {
+  .vertical-name {
     display: none;
   }
 }
+

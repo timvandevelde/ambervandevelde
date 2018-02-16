@@ -94,7 +94,7 @@ section.homepage-portfolio {
     padding: 3rem;
     background-color: $snow;
     text-align: left;
-    @include desktop {
+    @include tablet-and-desktop {
       padding: 8rem 0 4rem;
     }
   }
@@ -117,7 +117,7 @@ section.homepage-portfolio {
       margin: 0 0 2rem;
       height: 30rem;
       background: darken($snow, 5);
-      @include desktop {
+      @include tablet-and-desktop {
         height: 70vh;
       }
     }

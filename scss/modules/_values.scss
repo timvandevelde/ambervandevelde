@@ -7,6 +7,7 @@
     justify-content: space-around;
 
     > figure {
+      display: none;
       flex-grow: 1;
       min-width: 30rem;
       min-height: 30rem;
@@ -21,7 +22,7 @@
 
     .value-list {
       margin: 0 0 0 5rem;
-      flex-grow: 1;
+      // flex-grow: 1;
       @include smartphone {
         margin: 2rem 0;
       }

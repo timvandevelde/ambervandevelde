@@ -21,7 +21,7 @@ section.history {
   .history-item {
     position: relative;
     margin-bottom: 5rem;
-    @include desktop {
+    @include tablet-and-desktop {
       display: flex;
       justify-content: center;
       margin-bottom: 10rem;
