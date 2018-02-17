@@ -5,16 +5,18 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 
 jQuery( document ).ready(function($) {
 
-  $.fn.isInViewport = function() {
-    var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).outerHeight();
-    var logoTop = $(window).scrollTop() + 20;
 
-    return elementBottom > logoTop + 50 && elementTop < logoTop;
-  };
 
   function darkSection() {
     $('.dark-section').each(function() {
+
+      $.fn.isInViewport = function() {
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
+        var logoTop = $(window).scrollTop() + 20;
+        return elementBottom > logoTop + 50 && elementTop < logoTop;
+      };
+
       if ($(this).isInViewport()) {
         $("body").addClass("on-dark");
       } else {
