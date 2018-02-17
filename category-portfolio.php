@@ -23,7 +23,7 @@
                 <?php the_title(); ?>
               </h4>
               <p>
-                <?php the_excerpt(); ?>
+                <?php echo get_post_meta($post->ID, 'overview_summary', true); ?>
               </p>
             </a>
           </div>
