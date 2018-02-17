@@ -727,7 +727,8 @@ body.category .masonry-articles article.masonry-article .description a p {
   padding: 10% 10% 0 10%;
 }
 .entry-content section.portfolio-section img {
-  margin-bottom: 10%;
+  max-width: 112rem;
+  margin: 0 auto 10%;
 }
 .entry-content section.portfolio-laptop {
   display: flex;
