@@ -28,7 +28,7 @@ jQuery( document ).ready(function($) {
   if (isMobile == false) {
     $.scrollify({
       section : ".scroll-section",
-      scrollSpeed: 1000,
+      scrollSpeed: 600,
       setHeights: false,
       touchScroll: false,
       easing: "easeInOutCubic",
