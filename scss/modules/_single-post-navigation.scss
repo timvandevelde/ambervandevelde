@@ -35,6 +35,7 @@
 
     a {
       color: white;
+      @include line-hover(white, 0.3rem);
     }
   }
 }
