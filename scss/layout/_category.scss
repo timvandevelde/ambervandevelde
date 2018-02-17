@@ -54,9 +54,12 @@ body.category {
 
       .description {
         margin: 3rem 0;
-        padding: 0 4rem;
+        padding: 0 2rem 0 4rem;
         border-left: 0.1rem solid rgba(black, 0.1);
 
+        h4 {
+
+        }
         a {
           text-decoration: none;
 
