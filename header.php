@@ -80,6 +80,6 @@
       </figure>
     </section>
     <nav class="main-navigation" id="menu" role="navigation">
-      <div class="hamburger icon-bars">MENU</div>
+      <div class="hamburger icon-bars"></div>
     </nav>
   </header>
