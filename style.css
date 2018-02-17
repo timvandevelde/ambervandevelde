@@ -1002,6 +1002,9 @@ section.black {
   background: black;
   color: white;
 }
+section.grafite {
+  background: rgba(0, 0, 0, 0.9);
+}
 footer.main-footer {
   padding: 3.5rem;
   background: white;
