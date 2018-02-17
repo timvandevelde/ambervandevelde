@@ -26,7 +26,7 @@
         <?php echo the_excerpt(); ?>
       </div>
       <div class="tags">
-        <h6>Missie</h6>
+        <h6>Disciplines</h6>
         <ul>
           <?php
           $posttags = get_the_tags();
