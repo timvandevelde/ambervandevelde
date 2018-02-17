@@ -20,7 +20,7 @@
 .single-post-navigation.nav-below {
   display: flex;
   flex-wrap: wrap;
-  padding: 8rem 0;
+  padding: 10rem 0;
   background: black;
   color: white;
 
@@ -28,6 +28,11 @@
     flex-grow: 1;
     flex-basis: 50%;
     text-align: center;
+
+    h3 {
+      margin: 0;
+    }
+
     a {
       color: white;
     }
