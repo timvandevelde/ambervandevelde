@@ -1775,9 +1775,6 @@ section.homepage-introduction .vertical-wrapper div.content h1 {
     width: 100%;
   }
 }
-section.homepage-introduction .vertical-wrapper div.content p {
-  text-align: justify;
-}
 section.homepage-introduction .vertical-wrapper figure {
   position: relative;
   flex-basis: 44rem;
