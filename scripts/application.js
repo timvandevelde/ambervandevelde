@@ -8,14 +8,12 @@ jQuery( document ).ready(function($) {
   $.fn.isInViewport = function() {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
-
     var logoTop = $(window).scrollTop() + 20;
 
     return elementBottom > logoTop + 50 && elementTop < logoTop;
   };
 
   function darkSection() {
-    console.log("test");
     $('.dark-section').each(function() {
       if ($(this).isInViewport()) {
         $("body").addClass("on-dark");
