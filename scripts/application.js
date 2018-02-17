@@ -27,7 +27,7 @@ jQuery( document ).ready(function($) {
 
   if (isMobile == false) {
     $.scrollify({
-      section : ".scroll-section, img.size-full",
+      section : ".scroll-section",
       scrollSpeed: 1000,
       setHeights: false,
       touchScroll: false,
@@ -92,11 +92,11 @@ jQuery( document ).ready(function($) {
     });
   });
 
-  $(".entry-content").find("img.alignnone").each(function(){
-    var bgImage = $(this).attr("src");
-    console.log(bgImage);
-    $(this).css("background-image","url("+ bgImage +")").removeAttr("src srcset");
-  });
+  // $(".entry-content").find("img.alignnone").each(function(){
+  //   var bgImage = $(this).attr("src");
+  //   console.log(bgImage);
+  //   $(this).css("background-image","url("+ bgImage +")").removeAttr("src srcset");
+  // });
 
   $('.image-link').magnificPopup({type:'image'});
   $('.inline-link').magnificPopup({

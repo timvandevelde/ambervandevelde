@@ -711,26 +711,6 @@ body.category .masonry-articles article.masonry-article .description a p {
   font-weight: normal;
   text-align: justify;
 }
-.entry-content img.size-full {
-  display: block;
-}
-.entry-content img.size-full.alignnone {
-  height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-.entry-content img.size-full.aligncenter {
-  margin: 0 auto;
-  padding: 5rem 6rem;
-  max-height: 100vh;
-  height: auto;
-  width: auto;
-  max-width: 100%;
-}
-.entry-content img.size-full.aligncenter + img.aligncenter {
-  padding: 0 12rem 10rem;
-}
 header.main-header {
   position: fixed;
   width: 100%;
