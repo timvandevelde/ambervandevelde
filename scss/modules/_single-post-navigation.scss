@@ -1,0 +1,35 @@
+.single-post-navigation.nav-on-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  span.arrow {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    background: url('images/arrow-right.svg') top left no-repeat;
+    &.arrow-right {
+      align-self: flex-end;
+    }
+    &.arrow-left {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+.single-post-navigation.nav-below {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8rem 0;
+  background: black;
+  color: white;
+
+  > div {
+    flex-grow: 1;
+    flex-basis: 50%;
+    text-align: center;
+    a {
+      color: white;
+    }
+  }
+}

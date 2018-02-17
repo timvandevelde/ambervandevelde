@@ -6,7 +6,7 @@
   justify-content: center;
   text-align: center;
 
-  h3 {
+  h4 {
     margin: 0 0 5rem;
     width: 100%;
   }
@@ -17,23 +17,45 @@
     min-height: 35rem;
     flex-basis: 0;
     flex-grow: 1;
+    a {
+      text-decoration: none;
+      &:hover figure:after {
+        opacity: 0.5;
+      }
 
-    figure {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 5rem;
-      height: 100%;
-      background-color: darken($snow, 10);
-      background-size: cover;
+      figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        padding: 5rem;
+        height: 100%;
+        background-size: cover;
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          background: black;
+          opacity: 0.75;
+          transition: opacity 100ms ease-in-out;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
 
-      h4 a {
-        font-family: $heading-font-family;
-        font-size: 5rem;
-        text-transform: none;
-        font-weight: 900;
-        text-decoration: none;
-        letter-spacing: -0.1rem;
+        h4 {
+          position: relative;
+          z-index: 2;
+          color: white;
+          font-family: $heading-font-family;
+          font-size: 5rem;
+          line-height: 5.3rem;
+          text-transform: none;
+          font-weight: 900;
+          text-decoration: none;
+          letter-spacing: -0.1rem;
+        }
       }
     }
   }

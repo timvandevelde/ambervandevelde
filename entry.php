@@ -1,7 +1,24 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header class="scroll-section">
     <div class="page-width">
-      <?php if ( is_singular() ) { echo '<h1 class="entry-title">'; } else { echo '<h2 class="entry-title">'; } ?>
+      <nav class="single-post-navigation nav-on-top" class="scroll-section dark-section">
+        <div class="nav-previous">
+          <?php
+            if(get_previous_post()) {
+              previous_post_link( '%link', '<span class="arrow arrow-left"></span>' );
+            }
+          ?>
+        </div>
+        <div class="nav-next">
+          <?php
+            if(get_next_post()) {
+              next_post_link( '%link', '<span class="arrow arrow-right"></span>' );
+            }
+          ?>
+        </div>
+      </nav>
+
+      <?php if ( is_singular() ) { echo '<h1 class="entry-title h3">'; } else { echo '<h2 class="entry-title">'; } ?>
         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
       <?php if ( is_singular() ) { echo '</h1>'; } else { echo '</h2>'; } ?>
 

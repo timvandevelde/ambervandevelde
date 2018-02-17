@@ -27,17 +27,13 @@ section.homepage-introduction {
     div.content {
       position: relative;
       z-index: 5;
-      max-width: 45%;
-      margin-right: 4rem;
+      max-width: 44%;
+      margin-right: 5rem;
       padding-top: 5rem;
       @include smartphone {
         padding: 0;
         width: 100%;
         max-width: 100%;
-
-        h1 {
-          width: 100%;
-        }
 
         p {
           width: 100%;
@@ -45,10 +41,17 @@ section.homepage-introduction {
       }
 
       h1 {
+        font-size: 5rem;
+        line-height: 5.3rem;
+        letter-spacing: -0.1rem;
         width: 140%;
         @include smartphone {
           width: 100%;
         }
+      }
+
+      p {
+        text-align: justify;
       }
     }
 
@@ -87,16 +90,7 @@ section.homepage-portfolio {
   padding: 3rem;
   text-align: center;
   @include smartphone {
-    padding-top: 8rem;
-  }
-
-  section.colored {
-    padding: 3rem;
-    background-color: $snow;
-    text-align: left;
-    @include tablet-and-desktop {
-      padding: 8rem 0 4rem;
-    }
+    padding-top: 4rem;
   }
 
   .page-width {
@@ -105,20 +99,31 @@ section.homepage-portfolio {
     }
   }
 
+  h3 {
+    text-align: left;
+  }
+
   article.homepage-portfolio-item {
     margin: 5rem auto;
-    width: calc(100% - 24rem);
+    text-align: left;
     @include smartphone {
       margin: 3rem auto;
       width: 100%;
     }
 
     figure {
-      margin: 0 0 2rem;
+      margin: 0 auto 2rem;
       height: 30rem;
+      max-width: 128rem;
       background: darken($snow, 5);
       @include tablet-and-desktop {
         height: 70vh;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
 

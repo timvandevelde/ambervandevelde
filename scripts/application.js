@@ -15,6 +15,7 @@ jQuery( document ).ready(function($) {
   };
 
   function darkSection() {
+    console.log("test");
     $('.dark-section').each(function() {
       if ($(this).isInViewport()) {
         $("body").addClass("on-dark");
@@ -60,6 +61,8 @@ jQuery( document ).ready(function($) {
       scale: 1,
       easing: 'ease-out',
     }, 100);
+
+    darkSection();
 
     $(window).on('resize scroll', function() {
       darkSection();

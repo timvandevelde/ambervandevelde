@@ -419,6 +419,22 @@ template {
   font-weight: normal;
   font-style: normal;
 }
+.page-width {
+  margin: 0 auto;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  width: 100%;
+  max-width: 108rem;
+}
+.page-width.small {
+  max-width: 82rem;
+}
+@media screen and (max-width: 479px) {
+  .page-width {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
 button, .button {
   position: relative;
   display: inline-block;
@@ -491,55 +507,46 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-h1 {
+h1, .h1 {
   margin: 0 0 2.5rem;
-  font-family: 'Playfair-Display', sans-serif;
-  font-size: 5rem;
-  font-weight: 900;
-  line-height: 5.8rem;
-  letter-spacing: -0.1rem;
-}
-@media screen and (max-width: 479px) {
-  h1 {
-    font-size: 4rem;
-    line-height: 4.2rem;
-    margin: 0 0 1.5rem;
-  }
-}
-h1.super-big {
   font-family: 'Playfair-Display', sans-serif;
   font-size: 10rem;
   font-weight: 900;
   line-height: 9.5rem;
   letter-spacing: -0.2rem;
   text-transform: none;
-  white-space: nowrap;
-}
-h2 {
-  margin: 0 0 2.5rem;
-  font-family: 'Playfair-Display', sans-serif;
-  font-size: 4.9rem;
-  line-height: 5.8rem;
-  font-weight: 900;
-  letter-spacing: -0.1rem;
 }
 @media screen and (max-width: 479px) {
-  h2 {
-    font-size: 3rem;
-    line-height: 3.2rem;
+  h1, .h1 {
+    font-size: 5rem;
+    line-height: 5.2rem;
     margin: 0 0 1.5rem;
   }
 }
-h2.super-big {
+h2, .h2 {
+  margin: 0 0 2.5rem;
   font-family: 'Playfair-Display', sans-serif;
-  font-size: 8rem;
+  font-size: 7.5rem;
   font-weight: 900;
-  line-height: 7.5rem;
+  line-height: 7rem;
   letter-spacing: -0.2rem;
   text-transform: none;
-  white-space: nowrap;
 }
-h3 {
+@media screen and (max-width: 479px) {
+  h2, .h2 {
+    font-size: 4rem;
+    line-height: 4.2rem;
+    margin: 0 0 1.5rem;
+  }
+}
+h3, .h3 {
+  font-family: 'Playfair-Display', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: -0.1rem;
+  line-height: 5.3rem;
+}
+h4 {
   margin: 0 0 1.6rem;
   font-size: 2.2rem;
   line-height: 3.2rem;
@@ -547,22 +554,7 @@ h3 {
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
-h3.super-big {
-  font-family: 'Playfair-Display', sans-serif;
-  font-size: 6.5rem;
-  font-weight: 900;
-  line-height: 6rem;
-  letter-spacing: -0.2rem;
-  text-transform: none;
-  white-space: nowrap;
-}
-@media screen and (max-width: 479px) {
-  h3.super-big {
-    font-size: 4rem;
-    line-height: 4rem;
-  }
-}
-h4 {
+h5 {
   margin: 0 0 1.6rem;
   font-size: 2rem;
   line-height: 3.6rem;
@@ -570,7 +562,7 @@ h4 {
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
-h5 {
+h6 {
   margin: 0 0 1.6rem;
   font-size: 1.6rem;
   line-height: 2.2rem;
@@ -578,14 +570,22 @@ h5 {
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
-h6 {
-  margin: 0 0 1rem;
-  font-size: 1.6rem;
-  line-height: 2rem;
-  font-weight: bold;
+h6.breadcrumb a {
+  text-decoration: none;
 }
 p {
   margin: 0 0 1.6rem;
+}
+p.introduction {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 3.6rem;
+}
+@media screen and (max-width: 479px) {
+  p.introduction {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
 }
 span.underline {
   text-decoration: underline;
@@ -598,11 +598,30 @@ a {
   font-weight: bold;
   text-decoration: underline;
 }
+h1 a, h2 a, h3 a {
+  font-weight: 900;
+  text-decoration: none;
+}
 blockquote {
   margin: 1rem 0 2rem;
   font-size: 2.4rem;
   line-height: 3.6rem;
   font-weight: 500;
+}
+.quotes {
+  position: relative;
+}
+.quotes:before {
+  content: "“";
+  position: absolute;
+  left: -0.6em;
+  font-size: 120%;
+  line-height: 83.3333333333%;
+}
+.quotes:after {
+  content: "”";
+  font-size: 120%;
+  line-height: 83.3333333333%;
 }
 html {
   height: 100%;
@@ -622,7 +641,7 @@ body {
 body.category .category-header {
   height: 40vh;
   min-height: 43rem;
-  background: #fadb7f;
+  background: black;
 }
 body.category .category-header .page-width {
   display: flex;
@@ -632,6 +651,7 @@ body.category .category-header .page-width {
 }
 body.category .category-header .page-width h1 {
   margin-bottom: 10rem;
+  color: white;
 }
 body.category .masonry-articles {
   padding-top: 8%;
@@ -681,7 +701,7 @@ body.category .masonry-articles article.masonry-article figure img {
 }
 body.category .masonry-articles article.masonry-article .description {
   margin: 3rem 0;
-  padding: 0 3rem;
+  padding: 0 4rem;
   border-left: 0.1rem solid rgba(0, 0, 0, 0.1);
 }
 body.category .masonry-articles article.masonry-article .description a {
@@ -710,15 +730,6 @@ body.category .masonry-articles article.masonry-article .description a p {
 }
 .entry-content img.size-full.aligncenter + img.aligncenter {
   padding: 0 12rem 10rem;
-}
-.page-width {
-  margin: 0 auto;
-  padding-right: 4rem;
-  padding-left: 4rem;
-  max-width: 108rem;
-}
-.page-width.small {
-  max-width: 82rem;
 }
 header.main-header {
   position: fixed;
@@ -1141,7 +1152,7 @@ section.full-size-title:after {
   width: 100%;
   background: black;
 }
-section.full-size-title.white-on-black {
+section.full-size-title.black {
   background: black;
   color: white;
 }
@@ -1226,6 +1237,38 @@ header.main-header figure.logo {
   header.main-header figure.logo svg {
     width: 100%;
   }
+}
+.single-post-navigation.nav-on-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.single-post-navigation.nav-on-top span.arrow {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  background: url('images/arrow-right.svg') top left no-repeat;
+}
+.single-post-navigation.nav-on-top span.arrow.arrow-right {
+  align-self: flex-end;
+}
+.single-post-navigation.nav-on-top span.arrow.arrow-left {
+  transform: scaleX(-1);
+}
+.single-post-navigation.nav-below {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8rem 0;
+  background: black;
+  color: white;
+}
+.single-post-navigation.nav-below > div {
+  flex-grow: 1;
+  flex-basis: 50%;
+  text-align: center;
+}
+.single-post-navigation.nav-below > div a {
+  color: white;
 }
 .popup {
   background: white;
@@ -1312,18 +1355,25 @@ section.services-introduction {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: white;
-  color: black;
   padding: 10rem 2rem;
   height: 40vh;
   min-height: 43rem;
 }
 section.services-introduction h1 {
   margin: 0 auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
   width: 100%;
   max-width: 108rem;
+}
+section.services-introduction h1.small {
+  max-width: 82rem;
+}
+@media screen and (max-width: 479px) {
+  section.services-introduction h1 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
 section.services {
   background: white;
@@ -1336,7 +1386,7 @@ section.services article.service.service-right header {
   text-align: right;
 }
 section.services article.service.service-right header:after {
-  top: 15rem;
+  top: 30rem;
   left: 50%;
   right: 0;
 }
@@ -1357,7 +1407,7 @@ section.services article.service.service-right .content blockquote:after {
   width: 15rem;
 }
 section.services article.service.service-left header:after {
-  top: 17rem;
+  top: 30rem;
   left: 0;
   right: 50%;
 }
@@ -1373,7 +1423,7 @@ section.services article.service header:after {
   content: "";
   display: block;
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   background: #f3f2f0;
   height: 34rem;
 }
@@ -1398,10 +1448,13 @@ section.services article.service .content figure {
   position: relative;
   z-index: 2;
   margin-bottom: 5rem;
-  padding-top: 60%;
   width: 100%;
-  max-width: 68.5rem;
-  background: #c6c1b7;
+  max-width: 80rem;
+}
+section.services article.service .content figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 section.services article.service .content p {
   text-align: justify;
@@ -1417,12 +1470,6 @@ section.services article.service .content p, section.services article.service .c
 }
 section.services article.service .content h3 {
   margin: 3rem 0 2rem;
-  font-family: 'Playfair-Display', sans-serif;
-  font-size: 5rem;
-  font-weight: 900;
-  letter-spacing: -0.1rem;
-  line-height: 5.3rem;
-  text-transform: none;
 }
 .services-cta {
   padding: 10rem 0;
@@ -1432,7 +1479,7 @@ section.services article.service .content h3 {
   justify-content: center;
   text-align: center;
 }
-.services-cta h3 {
+.services-cta h4 {
   margin: 0 0 5rem;
   width: 100%;
 }
@@ -1443,18 +1490,40 @@ section.services article.service .content h3 {
   flex-basis: 0;
   flex-grow: 1;
 }
-.services-cta article figure {
+.services-cta article a {
+  text-decoration: none;
+}
+.services-cta article a:hover figure:after {
+  opacity: 0.5;
+}
+.services-cta article a figure {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
   padding: 5rem;
   height: 100%;
-  background-color: #dcd9d4;
   background-size: cover;
 }
-.services-cta article figure h4 a {
+.services-cta article a figure:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: black;
+  opacity: 0.75;
+  transition: opacity 100ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.services-cta article a figure h4 {
+  position: relative;
+  z-index: 2;
+  color: white;
   font-family: 'Playfair-Display', sans-serif;
   font-size: 5rem;
+  line-height: 5.3rem;
   text-transform: none;
   font-weight: 900;
   text-decoration: none;
@@ -1471,7 +1540,12 @@ section.services-overview {
 section.services-overview section.services-overview-introduction {
   position: relative;
   padding-top: 12rem;
-  padding-bottom: 12rem;
+}
+@media screen and (max-width: 479px) {
+  section.services-overview section.services-overview-introduction {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 section.services-overview section.services-overview-introduction:after {
   content: "";
@@ -1489,42 +1563,34 @@ section.services-overview section.services-overview-introduction > div {
   z-index: 2;
 }
 section.services-overview section.services-overview-introduction > div p {
+  max-width: 88rem;
   text-align: justify;
 }
 section.services-overview article.service-thumb {
-  display: flex;
-  justify-content: center;
-  padding: 5rem 0 10rem;
+  position: relative;
+  margin-bottom: 5rem;
 }
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 800px) {
   section.services-overview article.service-thumb {
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
   }
 }
-section.services-overview article.service-thumb.branding .content {
-  margin-top: 10rem;
-  margin-left: 20%;
-}
-section.services-overview article.service-thumb.digital-design .content {
-  margin-right: 10rem;
-  order: 2;
-}
-section.services-overview article.service-thumb.digital-design figure {
-  margin-top: 10rem;
-}
-@media screen and (max-width: 479px) {
-  section.services-overview article.service-thumb.digital-design figure {
-    left: 60%;
+@media screen and (min-width: 800px) {
+  section.services-overview article.service-thumb.digital-design {
+    left: -5%;
   }
-}
-section.services-overview article.service-thumb.content-social-media .content {
-  max-width: 44rem;
+  section.services-overview article.service-thumb.digital-design .content {
+    margin: 0 0 0 6.5rem;
+    order: 2;
+  }
 }
 section.services-overview article.service-thumb .content {
   position: relative;
   z-index: 2;
-  margin: 0 2rem 0;
+  margin: 0 6.5rem 0 0;
   max-width: 35rem;
 }
 section.services-overview article.service-thumb .content h3 {
@@ -1536,16 +1602,22 @@ section.services-overview article.service-thumb .content p {
 section.services-overview article.service-thumb figure {
   position: relative;
   z-index: 1;
-  margin: 0 2rem 0;
+  margin: 0;
   width: 100%;
-  max-width: 53rem;
-  min-height: 38rem;
-  background: #f3f2f0;
+  max-width: 58rem;
+  max-height: 35rem;
 }
 @media screen and (max-width: 479px) {
   section.services-overview article.service-thumb figure {
-    position: absolute;
+    margin: 3rem 0;
+    width: calc(100% + 5rem);
+    left: -2.5rem;
   }
+}
+section.services-overview article.service-thumb figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 div.menu-social {
   position: relative;
@@ -1569,6 +1641,11 @@ div.menu-social a.icon-facebook {
 }
 .values {
   padding: 14rem 0;
+}
+@media screen and (max-width: 479px) {
+  .values {
+    padding: 5rem 0;
+  }
 }
 .values .page-width {
   display: flex;
@@ -1664,8 +1741,8 @@ section.homepage-introduction .vertical-wrapper {
 section.homepage-introduction .vertical-wrapper div.content {
   position: relative;
   z-index: 5;
-  max-width: 45%;
-  margin-right: 4rem;
+  max-width: 44%;
+  margin-right: 5rem;
   padding-top: 5rem;
 }
 @media screen and (max-width: 479px) {
@@ -1674,20 +1751,23 @@ section.homepage-introduction .vertical-wrapper div.content {
     width: 100%;
     max-width: 100%;
   }
-  section.homepage-introduction .vertical-wrapper div.content h1 {
-    width: 100%;
-  }
   section.homepage-introduction .vertical-wrapper div.content p {
     width: 100%;
   }
 }
 section.homepage-introduction .vertical-wrapper div.content h1 {
+  font-size: 5rem;
+  line-height: 5.3rem;
+  letter-spacing: -0.1rem;
   width: 140%;
 }
 @media screen and (max-width: 479px) {
   section.homepage-introduction .vertical-wrapper div.content h1 {
     width: 100%;
   }
+}
+section.homepage-introduction .vertical-wrapper div.content p {
+  text-align: justify;
 }
 section.homepage-introduction .vertical-wrapper figure {
   position: relative;
@@ -1725,17 +1805,7 @@ section.homepage-portfolio {
 }
 @media screen and (max-width: 479px) {
   section.homepage-portfolio {
-    padding-top: 8rem;
-  }
-}
-section.homepage-portfolio section.colored {
-  padding: 3rem;
-  background-color: #f3f2f0;
-  text-align: left;
-}
-@media screen and (min-width: 800px) {
-  section.homepage-portfolio section.colored {
-    padding: 8rem 0 4rem;
+    padding-top: 4rem;
   }
 }
 @media screen and (max-width: 479px) {
@@ -1743,9 +1813,12 @@ section.homepage-portfolio section.colored {
     padding: 0;
   }
 }
+section.homepage-portfolio h3 {
+  text-align: left;
+}
 section.homepage-portfolio article.homepage-portfolio-item {
   margin: 5rem auto;
-  width: calc(100% - 24rem);
+  text-align: left;
 }
 @media screen and (max-width: 479px) {
   section.homepage-portfolio article.homepage-portfolio-item {
@@ -1754,14 +1827,20 @@ section.homepage-portfolio article.homepage-portfolio-item {
   }
 }
 section.homepage-portfolio article.homepage-portfolio-item figure {
-  margin: 0 0 2rem;
+  margin: 0 auto 2rem;
   height: 30rem;
+  max-width: 128rem;
   background: #e8e6e2;
 }
 @media screen and (min-width: 800px) {
   section.homepage-portfolio article.homepage-portfolio-item figure {
     height: 70vh;
   }
+}
+section.homepage-portfolio article.homepage-portfolio-item figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 section.homepage-portfolio article.homepage-portfolio-item h4 {
   margin: 3rem 0 0;
@@ -1808,12 +1887,21 @@ section.full-size-photo {
 }
 section.full-size-photo h1 {
   margin: 0 auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
   width: 100%;
   max-width: 108rem;
   margin-bottom: 10rem;
   color: white;
+}
+section.full-size-photo h1.small {
+  max-width: 82rem;
+}
+@media screen and (max-width: 479px) {
+  section.full-size-photo h1 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
 section.history {
   padding: 10rem 0;

@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <section id="content" role="main">
   <div class="vertical-name">Amber van de Velde</div>
-  <header class="header category-header scroll-section">
+  <header class="header category-header scroll-section dark-section">
     <div class="page-width">
-      <h1 class="entry-title super-big"><?php single_cat_title(); ?></h1>
+      <h1 class="entry-title"><?php single_cat_title(); ?></h1>
       <?php if ( '' != category_description() ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . category_description() . '</div>' ); ?>
     </div>
   </header>
@@ -19,9 +19,9 @@
           </figure>
           <div class="description">
             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
-              <h3 class="entry-title">
+              <h4 class="entry-title">
                 <?php the_title(); ?>
-              </h3>
+              </h4>
               <p>
                 <?php the_excerpt(); ?>
               </p>
@@ -32,7 +32,7 @@
     </div>
   </section>
   <section class="services-cta scroll-section">
-    <h3>Wat ik voor je kan betekenen</h3>
+    <h4>Wat ik voor je kan betekenen</h4>
 
     <?php
     $services =  get_page_by_title( 'Services' );
@@ -45,11 +45,13 @@
 
     while($services_children->have_posts()) : $services_children->the_post(); ?>
 
-      <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+    <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+      <a href="<?php the_permalink(); ?>">
         <figure style="background-image: url(<?php the_post_thumbnail_url(medium);?>)">
-          <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+          <h4><?php the_title(); ?></h4>
         </figure>
-      </article>
+      </a>
+    </article>
 
     <?php endwhile; ?>
     <?php wp_reset_postdata(); // reset the query ?>

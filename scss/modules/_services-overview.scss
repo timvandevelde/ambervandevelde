@@ -7,7 +7,10 @@ section.services-overview {
   section.services-overview-introduction {
     position: relative;
     padding-top: 12rem;
-    padding-bottom: 12rem;
+    @include smartphone {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
     &:after {
       content: "";
       position: absolute;
@@ -25,48 +28,35 @@ section.services-overview {
       z-index: 2;
 
       p {
+        max-width: 88rem;
         text-align: justify;
       }
     }
   }
 
   article.service-thumb {
-    display: flex;
-    justify-content: center;
-    padding: 5rem 0 10rem;
-    @include smartphone {
-      position: relative;
-      overflow: hidden;
-    }
-    &.branding {
-      .content {
-        margin-top: 10rem;
-        margin-left: 20%;
-      }
+    position: relative;
+    margin-bottom: 5rem;
+    @include tablet-and-desktop {
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      align-items: center;
     }
     &.digital-design {
-      .content {
-        margin-right: 10rem;
-        order: 2;
-      }
-
-      figure {
-        margin-top: 10rem;
-        @include smartphone {
-          left: 60%;
+      @include tablet-and-desktop {
+        left: -5%;
+        .content {
+          margin: 0 0 0 6.5rem;
+          order: 2;
         }
-      }
-    }
-    &.content-social-media {
-      .content {
-        max-width: 44rem;
       }
     }
 
     .content {
       position: relative;
       z-index: 2;
-      margin: 0 2rem 0;
+      margin: 0 6.5rem 0 0;
       max-width: 35rem;
 
       h3 {
@@ -81,13 +71,19 @@ section.services-overview {
     figure {
       position: relative;
       z-index: 1;
-      margin: 0 2rem 0;
+      margin: 0;
       width: 100%;
-      max-width: 53rem;
-      min-height: 38rem;
-      background: $snow;
+      max-width: 58rem;
+      max-height: 35rem;
       @include smartphone {
-        position: absolute;
+        margin: 3rem 0;
+        width: calc(100% + 5rem);
+        left: -2.5rem;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }

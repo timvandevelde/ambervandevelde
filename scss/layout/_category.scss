@@ -3,7 +3,7 @@ body.category {
   .category-header {
     height: 40vh;
     min-height: 43rem;
-    background: $sunlight;
+    background: black;
 
     .page-width {
       display: flex;
@@ -13,6 +13,7 @@ body.category {
 
       h1 {
         margin-bottom: 10rem;
+        color: white;
       }
     }
   }
@@ -53,7 +54,7 @@ body.category {
 
       .description {
         margin: 3rem 0;
-        padding: 0 3rem;
+        padding: 0 4rem;
         border-left: 0.1rem solid rgba(black, 0.1);
 
         a {
