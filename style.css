@@ -547,7 +547,7 @@ h3, .h3 {
   line-height: 5.3rem;
 }
 h4 {
-  margin: 0 0 1.6rem;
+  margin: 0 0 1rem;
   font-size: 2rem;
   line-height: 2.6rem;
   font-weight: bold;
@@ -928,6 +928,7 @@ body.on-dark nav.main-navigation div.hamburger {
   content: '';
   position: absolute;
   display: block;
+  left: 0;
   bottom: 0;
   height: 0.3rem;
   width: 100%;
@@ -967,6 +968,7 @@ body.on-dark nav.main-navigation div.hamburger {
   color: white;
   text-decoration: none;
   font-size: 1.8rem;
+  font-weight: normal;
   transform: translateY(5rem);
   text-transform: uppercase;
   letter-spacing: 0.2rem;
@@ -1060,6 +1062,7 @@ footer.main-footer .page-width > section section.footer-menu ul li a:after {
   content: '';
   position: absolute;
   display: block;
+  left: 0;
   bottom: 0;
   height: 0.1rem;
   width: 100%;
@@ -1267,7 +1270,7 @@ header.main-header figure.logo {
 .single-post-navigation.nav-below {
   display: flex;
   flex-wrap: wrap;
-  padding: 8rem 0;
+  padding: 10rem 0;
   background: black;
   color: white;
 }
@@ -1276,8 +1279,28 @@ header.main-header figure.logo {
   flex-basis: 50%;
   text-align: center;
 }
+.single-post-navigation.nav-below > div h3 {
+  margin: 0;
+}
 .single-post-navigation.nav-below > div a {
   color: white;
+  position: relative;
+}
+.single-post-navigation.nav-below > div a:hover:after {
+  transform: scaleX(1);
+}
+.single-post-navigation.nav-below > div a:after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  height: 0.3rem;
+  width: 100%;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: bottom left 0;
+  transition: transform 150ms ease-out;
 }
 .popup {
   background: white;
