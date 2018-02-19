@@ -4,17 +4,13 @@
       <nav class="single-post-navigation nav-on-top" class="scroll-section dark-section">
         <div class="nav-previous">
           <?php
-            if(get_previous_post()) {
-              previous_post_link( '%link', '<span class="arrow arrow-left"></span>' );
-            }
+          // Get the ID of a given category
+          $category_id = get_category_by_slug('portfolio');
+          // Get the URL of this category
+          $category_link = get_category_link( $category_id );
           ?>
-        </div>
-        <div class="nav-next">
-          <?php
-            if(get_next_post()) {
-              next_post_link( '%link', '<span class="arrow arrow-right"></span>' );
-            }
-          ?>
+
+          <a href="<?php echo esc_url( $category_link ); ?>"><span class="arrow arrow-left"></span>Terug naar overzicht</a>
         </div>
       </nav>
 

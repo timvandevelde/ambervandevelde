@@ -1256,21 +1256,20 @@ header.main-header figure.logo {
     width: 100%;
   }
 }
-.single-post-navigation.nav-on-top {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+.single-post-navigation.nav-on-top a {
+  font-weight: normal;
+  line-height: 2rem;
+  text-decoration: none;
+  font-size: 1.3rem;
 }
-.single-post-navigation.nav-on-top span.arrow {
-  display: flex;
+.single-post-navigation.nav-on-top a span.arrow {
+  display: inline-block;
+  margin-right: 1rem;
   width: 2rem;
   height: 2rem;
-  background: url('images/arrow-right.svg') top left no-repeat;
+  background: url('images/arrow-right.svg') bottom left no-repeat;
 }
-.single-post-navigation.nav-on-top span.arrow.arrow-right {
-  align-self: flex-end;
-}
-.single-post-navigation.nav-on-top span.arrow.arrow-left {
+.single-post-navigation.nav-on-top a span.arrow.arrow-left {
   transform: scaleX(-1);
 }
 .single-post-navigation.nav-below {

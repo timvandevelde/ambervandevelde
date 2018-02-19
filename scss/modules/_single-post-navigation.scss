@@ -1,18 +1,18 @@
 .single-post-navigation.nav-on-top {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-
-  span.arrow {
-    display: flex;
-    width: 2rem;
-    height: 2rem;
-    background: url('images/arrow-right.svg') top left no-repeat;
-    &.arrow-right {
-      align-self: flex-end;
-    }
-    &.arrow-left {
-      transform: scaleX(-1);
+  a {
+    font-weight: normal;
+    line-height: 2rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    span.arrow {
+      display: inline-block;
+      margin-right: 1rem;
+      width: 2rem;
+      height: 2rem;
+      background: url('images/arrow-right.svg') bottom left no-repeat;
+      &.arrow-left {
+        transform: scaleX(-1);
+      }
     }
   }
 }
