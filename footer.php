@@ -42,6 +42,14 @@
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/scripts/scrollify.js" type="text/javascript"></script>
 <!-- <script src="<?php echo get_stylesheet_directory_uri(); ?>/scripts/jquery.magnific-popup.min.js" type="text/javascript"></script> -->
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/scripts/application.js" type="text/javascript"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9509831-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-9509831-13');
+</script>
 </body>
 </html>
