@@ -2117,7 +2117,7 @@ section.homepage-portfolio > a {
   justify-content: space-between;
 }
 .post.category-portfolio header .page-width h1 {
-  margin: 2rem 0 1rem;
+  margin: 2rem 0 1.5rem;
   width: 100%;
 }
 .post.category-portfolio header .page-width h1 a {
