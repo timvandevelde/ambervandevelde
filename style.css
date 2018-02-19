@@ -618,6 +618,12 @@ blockquote {
 .quotes {
   position: relative;
 }
+@media screen and (max-width: 479px) {
+  .quotes {
+    margin-left: 3rem;
+    margin-right: 2rem;
+  }
+}
 .quotes:before {
   content: "“";
   position: absolute;

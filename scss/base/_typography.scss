@@ -132,6 +132,10 @@ blockquote {
 
 .quotes {
   position: relative;
+  @include smartphone {
+    margin-left: 3rem;
+    margin-right: 2rem;
+  }
   &:before {
     content: "“";
     position: absolute;
