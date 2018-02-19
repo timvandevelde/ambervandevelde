@@ -1,0 +1,15 @@
+section.services-introduction {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10% 2rem;
+  height: 40vh;
+  @include tablet-and-desktop {
+    padding: 10rem 2rem;
+    min-height: 43rem;
+  }
+  h1 {
+    @include page-width;
+  }
+}
