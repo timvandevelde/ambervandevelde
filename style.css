@@ -728,14 +728,15 @@ body.category .masonry-articles article.masonry-article .description a {
 }
 body.category .masonry-articles article.masonry-article .description a p {
   font-weight: normal;
-  text-align: justify;
 }
 .entry-content img {
   max-width: 100%;
   height: auto;
 }
-.entry-content section.portfolio-full {
-  height: 100vh;
+@media screen and (min-width: 480px) {
+  .entry-content section.portfolio-full {
+    height: 100vh;
+  }
 }
 .entry-content section.portfolio-full img {
   width: 100%;
@@ -2139,8 +2140,13 @@ section.homepage-portfolio > a {
   max-width: 64rem;
 }
 .post.category-portfolio header .page-width .tags {
-  margin-top: -3.4rem;
+  margin-top: 2rem;
   font-size: 1.3rem;
+}
+@media screen and (min-width: 480px) {
+  .post.category-portfolio header .page-width .tags {
+    margin-top: -3.4rem;
+  }
 }
 .post.category-portfolio header .page-width .tags h6 {
   margin: 0 0 0.9rem;

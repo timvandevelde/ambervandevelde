@@ -6,7 +6,9 @@
   }
 
   section.portfolio-full {
-    height: 100vh;
+    @include tablet-and-desktop {
+      height: 100vh;
+    }
 
     img {
       width: 100%;

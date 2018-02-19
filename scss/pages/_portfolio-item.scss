@@ -24,8 +24,11 @@
       }
 
       .tags {
-        margin-top: -3.4rem;
+        margin-top: 2rem;
         font-size: 1.3rem;
+        @include tablet-and-desktop {
+          margin-top: -3.4rem;
+        }
 
         h6 {
           margin: 0 0 0.9rem;
