@@ -43,9 +43,9 @@
     <div class="menu-content">
       <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
       <div class="menu-social">
-        <a href="https://www.facebook.com/amberlovesdesign/" class="icon-facebook"></a>
-        <a href="https://www.instragram.com/amberlovesdesign/" class="icon-instagram"></a>
-        <a href="https://pinterest.com/amberlovesdesign/" class="icon-pinterest"></a>
+        <a href="https://www.linkedin.com/in/amber-van-de-velde"><span class="icon-linkedin"></span></a>
+        <a href="https://www.facebook.com/amberlovesdesign/"><span class="icon-facebook"></span></a>
+        <a href="https://www.instagram.com/amberlovesdesign/"><span class="icon-instagram"></span></a>
       </div>
       <hr>
       <div class="menu-contact">

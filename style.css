@@ -658,9 +658,15 @@ body {
   background: #f9f9f9;
 }
 body.category .category-header {
-  height: 40vh;
-  min-height: 43rem;
   background: black;
+  padding: 10% 2rem;
+  height: 40vh;
+}
+@media screen and (min-width: 480px) {
+  body.category .category-header {
+    padding: 10rem 2rem;
+    min-height: 43rem;
+  }
 }
 body.category .category-header .page-width {
   display: flex;
@@ -737,6 +743,9 @@ body.category .masonry-articles article.masonry-article .description a p {
   .entry-content section.portfolio-full {
     height: 100vh;
   }
+  .entry-content section.portfolio-full img {
+    display: block;
+  }
 }
 .entry-content section.portfolio-full img {
   width: 100%;
@@ -760,7 +769,11 @@ body.category .masonry-articles article.masonry-article .description a p {
   justify-content: center;
   align-items: center;
   padding: 10%;
-  height: 100vh;
+}
+@media screen and (min-width: 480px) {
+  .entry-content section.portfolio-laptop {
+    height: 100vh;
+  }
 }
 .entry-content section.portfolio-laptop img {
   display: block;
@@ -1869,8 +1882,8 @@ div.menu-social a:hover {
   text-decoration: none;
   opacity: 0.7;
 }
-div.menu-social a.icon-facebook {
-  font-size: 1.7rem;
+div.menu-social a span.icon-facebook {
+  font-size: 2rem;
   vertical-align: text-bottom;
 }
 .values {
