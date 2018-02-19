@@ -21,7 +21,7 @@ section.services-overview {
     &:after {
       content: "";
       position: absolute;
-      z-index: 1;
+      z-index: -1;
       display: block;
       background: $snow;
       top: 16rem;
