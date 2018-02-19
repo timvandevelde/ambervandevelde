@@ -7,6 +7,8 @@ nav.main-navigation {
     font-weight: 500;
     letter-spacing: 0.3rem;
     cursor: pointer;
+    -webkit-transition: color 200ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    -o-transition: color 200ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
     transition: color 200ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
     &:before {
       position: absolute;
@@ -34,9 +36,16 @@ nav.main-navigation {
 
 .menu-overlay {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   top: 0;
   left: -9999rem;
   z-index: 100;
@@ -52,8 +61,10 @@ nav.main-navigation {
     height: 100%;
     color: white;
     opacity: 0;
-    transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
-    transform-origin: top right 0;
+    -webkit-transition: opacity 250ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    -o-transition: opacity 250ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    -moz-transition: opacity 250ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition: opacity 250ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
   }
 
   // Animations
@@ -76,25 +87,22 @@ nav.main-navigation {
     hr,
     div.menu-social,
     div.menu-contact a {
-      transform: translateY(0);
+      -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+              transform: translateY(0);
     }
 
     div.close {
       right: 5rem;
     }
 
-    .menu-background {
-      // transform: scale(1,1);
-    }
+
   }
   &.activating {
     .menu-background {
-      transform-origin: top right 0;
-    }
-  }
-  &.active {
-    .menu-background {
-      // transform-origin: top left 0;
+      -webkit-transform-origin: top right 0;
+          -ms-transform-origin: top right 0;
+              transform-origin: top right 0;
     }
   }
   &.deactivating {
@@ -102,41 +110,55 @@ nav.main-navigation {
     .menu-content,
     figure.logo,
     div.close {
-      transition-delay: 0s;
-      transition-duration: 500ms;
+      -webkit-transition-delay: 0s;
+           -o-transition-delay: 0s;
+              transition-delay: 0s;
+      -webkit-transition-duration: 500ms;
+           -o-transition-duration: 500ms;
+              transition-duration: 500ms;
       opacity: 0;
     }
 
     .menu-background {
-      transition-duration: 250ms;
+      -webkit-transition-duration: 250ms;
+           -o-transition-duration: 250ms;
+              transition-duration: 250ms;
     }
   }
 
   // Animations
-  .menu-content                                       { transition: all 500ms 200ms cubic-bezier(0.645, 0.045, 0.355, 1.000); }
-  figure.logo                                         { transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000);}
-  figure.logo svg #wit                                { transition: fill 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000); }
-  div.menu-main-menu-container ul li                  { transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1.000); }
-  div.menu-main-menu-container ul li + li             { transition-duration: 1100ms; }
-  div.menu-main-menu-container ul li + li + li        { transition-duration: 1200ms; }
-  div.menu-main-menu-container ul li + li + li + li   { transition-duration: 1300ms; }
-  hr                                                  { transition: transform 1400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); }
-  div.menu-social                                     { transition: transform 1500ms cubic-bezier(0.645, 0.045, 0.355, 1.000); }
-  div.menu-contact a                                  { transition: transform 1600ms cubic-bezier(0.645, 0.045, 0.355, 1.000), opacity 200ms ease-in-out; }
-  div.menu-contact a + a                              { transition: transform 1700ms cubic-bezier(0.645, 0.045, 0.355, 1.000), opacity 200ms ease-in-out; }
+  .menu-content                                       { -webkit-transition: all 500ms 200ms cubic-bezier(0.645, 0.045, 0.355, 1.000); -o-transition: all 500ms 200ms cubic-bezier(0.645, 0.045, 0.355, 1.000); transition: all 500ms 200ms cubic-bezier(0.645, 0.045, 0.355, 1.000); }
+  figure.logo                                         { -webkit-transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000); transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000); -o-transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000); transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000); transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000);}
+  figure.logo svg #wit                                { -webkit-transition: fill 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000); -o-transition: fill 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000); transition: fill 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000); }
+  div.menu-main-menu-container ul li                  { -webkit-transition: -webkit-transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1.000); transition: -webkit-transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1.000); -o-transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1.000); transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1.000); transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1.000), -webkit-transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1.000); }
+  div.menu-main-menu-container ul li + li             { -webkit-transition-duration: 1100ms; -o-transition-duration: 1100ms; transition-duration: 1100ms; }
+  div.menu-main-menu-container ul li + li + li        { -webkit-transition-duration: 1200ms; -o-transition-duration: 1200ms; transition-duration: 1200ms; }
+  div.menu-main-menu-container ul li + li + li + li   { -webkit-transition-duration: 1300ms; -o-transition-duration: 1300ms; transition-duration: 1300ms; }
+  hr                                                  { -webkit-transition: -webkit-transform 1400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); transition: -webkit-transform 1400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); -o-transition: transform 1400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); transition: transform 1400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); transition: transform 1400ms cubic-bezier(0.645, 0.045, 0.355, 1.000), -webkit-transform 1400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); }
+  div.menu-social                                     { -webkit-transition: -webkit-transform 1500ms cubic-bezier(0.645, 0.045, 0.355, 1.000); transition: -webkit-transform 1500ms cubic-bezier(0.645, 0.045, 0.355, 1.000); -o-transition: transform 1500ms cubic-bezier(0.645, 0.045, 0.355, 1.000); transition: transform 1500ms cubic-bezier(0.645, 0.045, 0.355, 1.000); transition: transform 1500ms cubic-bezier(0.645, 0.045, 0.355, 1.000), -webkit-transform 1500ms cubic-bezier(0.645, 0.045, 0.355, 1.000); }
+  div.menu-contact a                                  { -webkit-transition: opacity 200ms ease-in-out, -webkit-transform 1600ms cubic-bezier(0.645, 0.045, 0.355, 1.000); transition: opacity 200ms ease-in-out, -webkit-transform 1600ms cubic-bezier(0.645, 0.045, 0.355, 1.000); -o-transition: transform 1600ms cubic-bezier(0.645, 0.045, 0.355, 1.000), opacity 200ms ease-in-out; transition: transform 1600ms cubic-bezier(0.645, 0.045, 0.355, 1.000), opacity 200ms ease-in-out; transition: transform 1600ms cubic-bezier(0.645, 0.045, 0.355, 1.000), opacity 200ms ease-in-out, -webkit-transform 1600ms cubic-bezier(0.645, 0.045, 0.355, 1.000); }
+  div.menu-contact a + a                              { -webkit-transition: opacity 200ms ease-in-out, -webkit-transform 1700ms cubic-bezier(0.645, 0.045, 0.355, 1.000); transition: opacity 200ms ease-in-out, -webkit-transform 1700ms cubic-bezier(0.645, 0.045, 0.355, 1.000); -o-transition: transform 1700ms cubic-bezier(0.645, 0.045, 0.355, 1.000), opacity 200ms ease-in-out; transition: transform 1700ms cubic-bezier(0.645, 0.045, 0.355, 1.000), opacity 200ms ease-in-out; transition: transform 1700ms cubic-bezier(0.645, 0.045, 0.355, 1.000), opacity 200ms ease-in-out, -webkit-transform 1700ms cubic-bezier(0.645, 0.045, 0.355, 1.000); }
 
   .menu-content {
     position: relative;
     z-index: 100;
     opacity: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     height: 100%;
     max-height: 75rem;
     padding: 2% 20% 4%;
     @include smartphone {
-      justify-content: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       padding: 2% 15% 4%;
     }
     @include smartphone-landscape {
@@ -153,7 +175,9 @@ nav.main-navigation {
     left: -999rem;
     opacity: 0;
     @include smartphone {
-      transform: scale(0.5) translate(-1rem, 0rem);
+      -webkit-transform: scale(0.5) translate(-1rem, 0rem);
+          -ms-transform: scale(0.5) translate(-1rem, 0rem);
+              transform: scale(0.5) translate(-1rem, 0rem);
     }
 
     svg #wit {
@@ -170,7 +194,9 @@ nav.main-navigation {
 
       li {
         margin: 1.5% 0;
-        transform: translateY(5rem);
+        -webkit-transform: translateY(5rem);
+            -ms-transform: translateY(5rem);
+                transform: translateY(5rem);
 
         a {
           position: relative;
@@ -198,7 +224,9 @@ nav.main-navigation {
     width: 10rem;
     height: 0.2rem;
     background: white;
-    transform: translateY(5rem);
+    -webkit-transform: translateY(5rem);
+        -ms-transform: translateY(5rem);
+            transform: translateY(5rem);
     @include tablet {
       display: none;
     }
@@ -206,7 +234,9 @@ nav.main-navigation {
 
   div.menu-social {
     margin: 2rem 0;
-    transform: translateY(5rem);
+    -webkit-transform: translateY(5rem);
+        -ms-transform: translateY(5rem);
+            transform: translateY(5rem);
     @include tablet {
       display: none;
     }
@@ -225,7 +255,9 @@ nav.main-navigation {
       text-decoration: none;
       font-size: 1.8rem;
       font-weight: normal;
-      transform: translateY(5rem);
+      -webkit-transform: translateY(5rem);
+          -ms-transform: translateY(5rem);
+              transform: translateY(5rem);
       text-transform: uppercase;
       letter-spacing: 0.2rem;
       @include smartphone {

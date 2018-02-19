@@ -954,6 +954,8 @@ nav.main-navigation div.hamburger {
   font-weight: 500;
   letter-spacing: 0.3rem;
   cursor: pointer;
+  -webkit-transition: color 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: color 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: color 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 nav.main-navigation div.hamburger:before {
@@ -980,8 +982,15 @@ body.on-dark nav.main-navigation div.hamburger {
 }
 .menu-overlay {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   top: 0;
   left: -9999rem;
@@ -998,8 +1007,10 @@ body.on-dark nav.main-navigation div.hamburger {
   height: 100%;
   color: white;
   opacity: 0;
-  transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  transform-origin: top right 0;
+  -webkit-transition: opacity 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: opacity 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: opacity 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .menu-overlay.activating, .menu-overlay.active {
   left: 0;
@@ -1011,61 +1022,111 @@ body.on-dark nav.main-navigation div.hamburger {
   left: 5%;
 }
 .menu-overlay.activating div.menu-main-menu-container ul li, .menu-overlay.active div.menu-main-menu-container ul li, .menu-overlay.activating hr, .menu-overlay.active hr, .menu-overlay.activating div.menu-social, .menu-overlay.active div.menu-social, .menu-overlay.activating div.menu-contact a, .menu-overlay.active div.menu-contact a {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
   transform: translateY(0);
 }
 .menu-overlay.activating div.close, .menu-overlay.activating .mfp-content .mfp-close, .mfp-content .menu-overlay.activating .mfp-close, .menu-overlay.active div.close, .menu-overlay.active .mfp-content .mfp-close, .mfp-content .menu-overlay.active .mfp-close {
   right: 5rem;
 }
 .menu-overlay.activating .menu-background {
+  -webkit-transform-origin: top right 0;
+  -ms-transform-origin: top right 0;
   transform-origin: top right 0;
 }
 .menu-overlay.deactivating .menu-background, .menu-overlay.deactivating .menu-content, .menu-overlay.deactivating figure.logo, .menu-overlay.deactivating div.close, .menu-overlay.deactivating .mfp-content .mfp-close, .mfp-content .menu-overlay.deactivating .mfp-close {
+  -webkit-transition-delay: 0s;
+  -o-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
   transition-duration: 500ms;
   opacity: 0;
 }
 .menu-overlay.deactivating .menu-background {
+  -webkit-transition-duration: 250ms;
+  -o-transition-duration: 250ms;
   transition-duration: 250ms;
 }
 .menu-overlay .menu-content {
+  -webkit-transition: all 500ms 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 500ms 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 500ms 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .menu-overlay figure.logo {
+  -webkit-transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 500ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .menu-overlay figure.logo svg #wit {
+  -webkit-transition: fill 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: fill 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: fill 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .menu-overlay div.menu-main-menu-container ul li {
+  -webkit-transition: -webkit-transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: -webkit-transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .menu-overlay div.menu-main-menu-container ul li + li {
+  -webkit-transition-duration: 1100ms;
+  -o-transition-duration: 1100ms;
   transition-duration: 1100ms;
 }
 .menu-overlay div.menu-main-menu-container ul li + li + li {
+  -webkit-transition-duration: 1200ms;
+  -o-transition-duration: 1200ms;
   transition-duration: 1200ms;
 }
 .menu-overlay div.menu-main-menu-container ul li + li + li + li {
+  -webkit-transition-duration: 1300ms;
+  -o-transition-duration: 1300ms;
   transition-duration: 1300ms;
 }
 .menu-overlay hr {
+  -webkit-transition: -webkit-transform 1400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: -webkit-transform 1400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 1400ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 1400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 1400ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 1400ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .menu-overlay div.menu-social {
+  -webkit-transition: -webkit-transform 1500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: -webkit-transform 1500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 1500ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 1500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 1500ms cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 1500ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .menu-overlay div.menu-contact a {
+  -webkit-transition: opacity 200ms ease-in-out, -webkit-transform 1600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 200ms ease-in-out, -webkit-transform 1600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 1600ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 200ms ease-in-out;
   transition: transform 1600ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 200ms ease-in-out;
+  transition: transform 1600ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 200ms ease-in-out, -webkit-transform 1600ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .menu-overlay div.menu-contact a + a {
+  -webkit-transition: opacity 200ms ease-in-out, -webkit-transform 1700ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 200ms ease-in-out, -webkit-transform 1700ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 1700ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 200ms ease-in-out;
   transition: transform 1700ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 200ms ease-in-out;
+  transition: transform 1700ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 200ms ease-in-out, -webkit-transform 1700ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .menu-overlay .menu-content {
   position: relative;
   z-index: 100;
   opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   height: 100%;
   max-height: 75rem;
@@ -1073,6 +1134,8 @@ body.on-dark nav.main-navigation div.hamburger {
 }
 @media screen and (max-width: 768px) {
   .menu-overlay .menu-content {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding: 2% 15% 4%;
   }
@@ -1095,6 +1158,8 @@ body.on-dark nav.main-navigation div.hamburger {
 }
 @media screen and (max-width: 768px) {
   .menu-overlay figure.logo {
+    -webkit-transform: scale(0.5) translate(-1rem, 0rem);
+    -ms-transform: scale(0.5) translate(-1rem, 0rem);
     transform: scale(0.5) translate(-1rem, 0rem);
   }
 }
@@ -1108,6 +1173,8 @@ body.on-dark nav.main-navigation div.hamburger {
 }
 .menu-overlay div.menu-main-menu-container ul li {
   margin: 1.5% 0;
+  -webkit-transform: translateY(5rem);
+  -ms-transform: translateY(5rem);
   transform: translateY(5rem);
 }
 .menu-overlay div.menu-main-menu-container ul li a {
@@ -1149,6 +1216,8 @@ body.on-dark nav.main-navigation div.hamburger {
   width: 10rem;
   height: 0.2rem;
   background: white;
+  -webkit-transform: translateY(5rem);
+  -ms-transform: translateY(5rem);
   transform: translateY(5rem);
 }
 @media screen and (min-width: 769px) and (max-width: 960px) {
@@ -1158,6 +1227,8 @@ body.on-dark nav.main-navigation div.hamburger {
 }
 .menu-overlay div.menu-social {
   margin: 2rem 0;
+  -webkit-transform: translateY(5rem);
+  -ms-transform: translateY(5rem);
   transform: translateY(5rem);
 }
 @media screen and (min-width: 769px) and (max-width: 960px) {
@@ -1178,6 +1249,8 @@ body.on-dark nav.main-navigation div.hamburger {
   text-decoration: none;
   font-size: 1.8rem;
   font-weight: normal;
+  -webkit-transform: translateY(5rem);
+  -ms-transform: translateY(5rem);
   transform: translateY(5rem);
   text-transform: uppercase;
   letter-spacing: 0.2rem;
@@ -1816,7 +1889,6 @@ section.services-overview article.service-thumb figure {
   position: relative;
   z-index: 1;
   margin: 0;
-  padding-top: 30%;
   width: 50%;
 }
 @media screen and (max-width: 768px) {
@@ -1832,6 +1904,7 @@ section.services-overview article.service-thumb figure {
 }
 section.services-overview article.service-thumb figure a {
   display: block;
+  padding-top: 60.54%;
 }
 section.services-overview article.service-thumb figure a:hover img {
   opacity: 0.8;
