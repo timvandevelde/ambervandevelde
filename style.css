@@ -667,7 +667,7 @@ body.category .masonry-articles {
 body.category .masonry-articles .gutter-sizer {
   width: 5%;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 480px) {
   body.category .masonry-articles .gutter-sizer {
     width: 12%;
   }
@@ -675,7 +675,7 @@ body.category .masonry-articles .gutter-sizer {
 body.category .masonry-articles article.masonry-article {
   width: calc(100% - 8rem);
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 480px) {
   body.category .masonry-articles article.masonry-article {
     width: calc(44% - 4rem);
   }
@@ -1590,7 +1590,7 @@ section.services-overview section.services-overview-introduction {
 }
 @media screen and (max-width: 479px) {
   section.services-overview section.services-overview-introduction {
-    padding-top: 4rem;
+    padding-top: 8rem;
     padding-bottom: 4rem;
   }
 }
@@ -1624,7 +1624,7 @@ section.services-overview article.service-thumb {
   position: relative;
   padding: 0 3rem 5rem;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 480px) {
   section.services-overview article.service-thumb {
     flex-direction: row;
     justify-content: center;
@@ -1648,11 +1648,11 @@ section.services-overview article.service-thumb.digital-design:after {
     display: none;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 480px) {
   section.services-overview article.service-thumb.digital-design .content {
     align-self: flex-start;
     margin: 0 0 2rem 6.5rem;
-    order: 2;
+    order: 1;
   }
 }
 section.services-overview article.service-thumb.content-social-media .content {
@@ -1661,13 +1661,13 @@ section.services-overview article.service-thumb.content-social-media .content {
 section.services-overview article.service-thumb .content {
   position: relative;
   z-index: 2;
-  order: 2;
+  order: 1;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 480px) {
   section.services-overview article.service-thumb .content {
     margin: 0 6.5rem 2rem 0;
     max-width: 35rem;
-    order: 1;
+    order: 0;
   }
   section.services-overview article.service-thumb .content h3 {
     margin-bottom: 3.5rem;
@@ -1811,6 +1811,7 @@ section.homepage-introduction {
   justify-content: center;
   align-items: center;
   min-height: 70vh;
+  overflow: hidden;
 }
 @media screen and (max-width: 479px) {
   section.homepage-introduction {
@@ -1947,7 +1948,7 @@ section.homepage-portfolio article.homepage-portfolio-item figure {
   max-width: 128rem;
   background: #e8e6e2;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 480px) {
   section.homepage-portfolio article.homepage-portfolio-item figure {
     height: 70vh;
   }
@@ -2025,7 +2026,7 @@ section.history .history-item {
   position: relative;
   margin-bottom: 5rem;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 480px) {
   section.history .history-item {
     display: flex;
     justify-content: center;
