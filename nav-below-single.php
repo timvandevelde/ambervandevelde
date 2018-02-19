@@ -1,4 +1,4 @@
-<nav class="single-post-navigation nav-below scroll-section">
+<nav class="single-post-navigation nav-below">
   <div class="nav-previous">
     <?php
       if(get_previous_post()) {
