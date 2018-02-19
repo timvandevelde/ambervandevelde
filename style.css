@@ -1358,57 +1358,6 @@ header.main-header figure.logo {
     width: 100%;
   }
 }
-.single-post-navigation.nav-on-top a {
-  font-weight: normal;
-  line-height: 2rem;
-  text-decoration: none;
-  font-size: 1.3rem;
-}
-.single-post-navigation.nav-on-top a span.arrow {
-  display: inline-block;
-  margin-right: 1rem;
-  width: 2rem;
-  height: 2rem;
-  background: url('images/arrow-right.svg') bottom left no-repeat;
-}
-.single-post-navigation.nav-on-top a span.arrow.arrow-left {
-  transform: scaleX(-1);
-}
-.single-post-navigation.nav-below {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10rem 0;
-  background: black;
-  color: white;
-}
-.single-post-navigation.nav-below > div {
-  flex-grow: 1;
-  flex-basis: 50%;
-  text-align: center;
-}
-.single-post-navigation.nav-below > div h3 {
-  margin: 0;
-}
-.single-post-navigation.nav-below > div a {
-  color: white;
-  position: relative;
-}
-.single-post-navigation.nav-below > div a:hover:after {
-  transform: scaleX(1);
-}
-.single-post-navigation.nav-below > div a:after {
-  content: '';
-  position: absolute;
-  display: block;
-  left: 0;
-  bottom: 0;
-  height: 0.3rem;
-  width: 100%;
-  background: white;
-  transform: scaleX(0);
-  transform-origin: bottom left 0;
-  transition: transform 150ms ease-out;
-}
 .popup {
   background: white;
   margin: 0 auto;
@@ -1488,6 +1437,67 @@ header.main-header figure.logo {
 /* content animate out */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
+}
+a.scroll {
+  position: absolute;
+  bottom: 15rem;
+  opacity: 0;
+  animation-name: scrollintro;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+@media screen and (max-width: 479px) {
+  a.scroll {
+    display: none;
+  }
+}
+a.scroll span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 3rem;
+  height: 5rem;
+  margin-left: -1.5rem;
+  border: 0.2rem solid black;
+  border-radius: 5rem;
+}
+a.scroll span:before {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  content: '';
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-left: -0.3rem;
+  background-color: black;
+  border-radius: 100%;
+  animation: 2s infinite scrollanimation;
+}
+@keyframes scrollintro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scrollanimation {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 2rem);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .services-cta {
   padding: 10rem 0;
@@ -1693,6 +1703,57 @@ section.services-overview article.service-thumb figure img {
     position: relative;
   }
 }
+.single-post-navigation.nav-on-top a {
+  font-weight: normal;
+  line-height: 2rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+.single-post-navigation.nav-on-top a span.arrow {
+  display: inline-block;
+  margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  background: url('images/arrow-right.svg') bottom left no-repeat;
+}
+.single-post-navigation.nav-on-top a span.arrow.arrow-left {
+  transform: scaleX(-1);
+}
+.single-post-navigation.nav-below {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rem 0;
+  background: black;
+  color: white;
+}
+.single-post-navigation.nav-below > div {
+  flex-grow: 1;
+  flex-basis: 50%;
+  text-align: center;
+}
+.single-post-navigation.nav-below > div h3 {
+  margin: 0;
+}
+.single-post-navigation.nav-below > div a {
+  color: white;
+  position: relative;
+}
+.single-post-navigation.nav-below > div a:hover:after {
+  transform: scaleX(1);
+}
+.single-post-navigation.nav-below > div a:after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  height: 0.3rem;
+  width: 100%;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: bottom left 0;
+  transition: transform 150ms ease-out;
+}
 div.menu-social {
   position: relative;
 }
@@ -1787,7 +1848,7 @@ section.homepage-introduction {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
+  min-height: calc(100vh - 5rem);
   overflow: hidden;
 }
 @media screen and (max-width: 479px) {
@@ -1802,7 +1863,7 @@ section.homepage-introduction .vertical-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
-  margin: 8rem auto 10rem;
+  margin: 12rem auto;
 }
 @media screen and (max-width: 479px) {
   section.homepage-introduction .vertical-wrapper {

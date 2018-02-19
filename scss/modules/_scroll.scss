@@ -1,0 +1,59 @@
+a.scroll {
+  position: absolute;
+  bottom: 15rem;
+  opacity: 0;
+  animation-name: scrollintro;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  @include smartphone {
+    display: none;
+  }
+  span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 3rem;
+    height: 5rem;
+    margin-left: -1.5rem;
+    border: 0.2rem solid black;
+    border-radius: 5rem;
+    &:before {
+      position: absolute;
+      top: 1rem;
+      left: 50%;
+      content: '';
+      width: 0.6rem;
+      height: 0.6rem;
+      margin-left: -0.3rem;
+      background-color: black;
+      border-radius: 100%;
+      animation: 2s infinite scrollanimation;
+    }
+  }
+}
+@keyframes scrollintro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scrollanimation {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 2rem);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

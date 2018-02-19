@@ -1,9 +1,9 @@
 @mixin smartphone {
   @media screen and (max-width: 479px) { @content; }
 }
-@mixin smartphone-landscape {
-  media screen and (orientation:landscape) and max-width: 768px { @content; }
-}
+// @mixin smartphone-landscape {
+//   media screen and (orientation:landscape) and max-width: 768px { @content; }
+// }
 @mixin tablet {
   @media screen and (min-width: 480px) and (max-width: 960px) { @content; }
 }
