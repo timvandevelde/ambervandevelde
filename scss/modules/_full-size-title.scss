@@ -9,7 +9,7 @@ section.full-size-title {
   padding: 12rem 0;
   height: 100vh;
   @include smartphone {
-    height: auto;
+    // height: auto;
     padding: 12rem 2rem 8rem;
   }
   &:after {
