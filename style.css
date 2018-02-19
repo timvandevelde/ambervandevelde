@@ -762,6 +762,17 @@ body.category .masonry-articles article.masonry-article .description a p {
   width: auto;
   max-height: 60vh;
 }
+.entry-content section.portfolio-mailing {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.entry-content section.portfolio-mailing img:first-child {
+  width: 55%;
+}
+.entry-content section.portfolio-mailing img:last-child {
+  width: 25%;
+}
 footer.main-footer {
   background: white;
   padding: 3.5rem 0;
@@ -1576,7 +1587,7 @@ a.scroll span:before {
   }
 }
 .services-cta {
-  padding: 10rem 0;
+  padding: 10rem 3rem;
   background: #f3f2f0;
   display: flex;
   flex-wrap: wrap;

@@ -38,4 +38,17 @@
       max-height: 60vh;
     }
   }
+
+  section.portfolio-mailing {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    img:first-child {
+      width: 55%;
+    }
+    img:last-child {
+      width: 25%;
+    }
+  }
 }
