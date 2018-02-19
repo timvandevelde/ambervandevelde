@@ -518,8 +518,8 @@ h1, .h1 {
 }
 @media screen and (max-width: 479px) {
   h1, .h1 {
-    font-size: 5rem;
-    line-height: 5.2rem;
+    font-size: 5.5rem;
+    line-height: 5.5rem;
     letter-spacing: -0.1rem;
     margin: 0 0 1.5rem;
   }
@@ -551,6 +551,8 @@ h3, .h3 {
 }
 @media screen and (max-width: 479px) {
   h3, .h3 {
+    font-size: 3.5rem;
+    line-height: 4rem;
     margin-bottom: 1.5rem;
   }
 }
