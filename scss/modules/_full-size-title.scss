@@ -50,5 +50,8 @@ section.full-size-title {
         line-height: 4.2rem;
       }
     }
+    @include smartphone-landscape {
+      color: red;
+    }
   }
 }
