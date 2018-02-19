@@ -438,7 +438,7 @@ template {
 button, .button {
   position: relative;
   display: inline-block;
-  padding: 0.6rem 2rem 0.4rem;
+  padding: 0.6rem 2rem 0.5rem;
   border: 0.1rem solid black;
   text-transform: uppercase;
   font-size: 1.4rem;
@@ -1997,7 +1997,7 @@ section.homepage-portfolio article.homepage-portfolio-item figure img {
   object-fit: cover;
 }
 section.homepage-portfolio article.homepage-portfolio-item h4 {
-  margin: 3rem 0 0;
+  margin: 3rem 0 0.5rem;
 }
 section.homepage-portfolio > a {
   margin: 3rem auto;
