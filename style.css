@@ -1150,6 +1150,11 @@ section.services article.service {
   padding: 14rem 0;
   position: relative;
 }
+@media screen and (max-width: 479px) {
+  section.services article.service {
+    padding: 6rem 0;
+  }
+}
 section.services article.service.service-right header {
   text-align: right;
 }

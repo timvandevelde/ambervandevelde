@@ -4,6 +4,9 @@ section.services {
   article.service {
     padding: 14rem 0;
     position: relative;
+    @include smartphone {
+      padding: 6rem 0;
+    }
     &.service-right {
       header {
         text-align: right;
