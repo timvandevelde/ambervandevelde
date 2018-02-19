@@ -12,14 +12,6 @@ section.full-size-title {
     // height: auto;
     padding: 12rem 2rem 8rem;
   }
-  &:after {
-    content: '';
-    position: absolute;
-    height: 1px;
-    bottom: 0;
-    width: 100%;
-    background: black;
-  }
   &.black {
     background: black;
     color: white;

@@ -1,12 +1,12 @@
 section.full-size-photo {
-  height: 90vh;
-  background: #666 url("images/over-mij.jpg") no-repeat;
-  background-size: cover;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: left;
+  height: 90vh;
+  background: #666 url("images/over-mij.jpg") no-repeat;
+  background-size: cover;
+  background-position: 32%;
 
   h1 {
     @include page-width;
@@ -48,13 +48,15 @@ section.history {
     div.content {
       position: relative;
       z-index: 2;
-      margin-right: 3rem;
-      margin-left: 3rem;
     }
 
     header {
-      width: 34rem;
       text-align: right;
+      margin-right: 3rem;
+      margin-left: 3rem;
+      @include tablet-and-desktop {
+        width: 34rem;
+      }
 
       .number {
         margin-bottom: 2rem;
@@ -74,9 +76,16 @@ section.history {
     div.content {
       margin-top: 3rem;
       max-width: 48rem;
-
+      @include tablet-and-desktop {
+        margin-right: 3rem;
+        margin-left: 3rem;
+      }
       p {
         text-align: justify;
+        @include smartphone {
+          margin-right: 3rem;
+          margin-left: 3rem;
+        }
       }
 
       p:last-of-type {
@@ -91,6 +100,8 @@ section.history {
 
         img {
           width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
     }
@@ -99,23 +110,29 @@ section.history {
   .award {
     header {
       align-self: flex-start;
-      margin: 0 2rem;
-      padding: 5rem 5rem 5rem 10rem;
-      width: 50rem;
+      padding: 3rem 3rem 3rem 6rem;
+      margin: 0;
       background: black;
       color: white;
       text-align: left;
+      @include tablet-and-desktop {
+        padding: 5rem 5rem 5rem 10rem;
+        margin: 0 3rem;
+        width: 50rem;
+      }
 
       .number {
         margin-left: -5rem;
       }
     }
     div.content {
-      margin: 28rem 2rem 0;
-      width: 100%;
+      margin: 0;
       max-width: 40rem;
       height: 32rem;
-
+      @include tablet-and-desktop {
+        width: 100%;
+        margin: 28rem 3rem 0;
+      }
       figure {
         width: 100%;
         height: 100%;

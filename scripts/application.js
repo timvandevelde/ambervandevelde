@@ -93,12 +93,15 @@ jQuery( document ).ready(function($) {
       $(this).removeClass("active deactivating").dequeue();
     });
   });
+  $(document).keyup(function(e) {
+    if (e.keyCode === 27) {
+      $(".menu-overlay").addClass("deactivating").delay(500).queue(function(){
+        $(this).removeClass("active deactivating").dequeue();
+      });
+    }
+  });
 
-  // $(".entry-content").find("img.alignnone").each(function(){
-  //   var bgImage = $(this).attr("src");
-  //   console.log(bgImage);
-  //   $(this).css("background-image","url("+ bgImage +")").removeAttr("src srcset");
-  // });
+
 
   $('.image-link').magnificPopup({type:'image'});
   $('.inline-link').magnificPopup({
