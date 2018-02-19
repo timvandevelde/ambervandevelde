@@ -752,6 +752,7 @@ body.category .masonry-articles article.masonry-article .description a p {
 }
 footer.main-footer {
   background: white;
+  padding: 3.5rem 0;
 }
 @media screen and (min-width: 480px) {
   footer.main-footer {
@@ -765,6 +766,11 @@ footer.main-footer .page-width {
   align-items: center;
   max-width: 130rem;
 }
+@media screen and (max-width: 479px) {
+  footer.main-footer .page-width {
+    justify-content: center;
+  }
+}
 footer.main-footer .page-width figure.logo {
   max-width: 13rem;
   margin: 1rem;
@@ -776,6 +782,7 @@ footer.main-footer .page-width figure.logo {
 }
 footer.main-footer .page-width figure.logo svg {
   width: 100%;
+  height: auto;
 }
 footer.main-footer .page-width div.social {
   display: flex;
