@@ -1917,11 +1917,6 @@ section.services-overview article.service-thumb figure img {
   object-fit: cover;
   transition: opacity 100ms ease-in-out;
 }
-@media screen and (max-width: 768px) {
-  section.services-overview article.service-thumb figure img {
-    position: relative;
-  }
-}
 .single-post-navigation.nav-on-top a {
   font-weight: normal;
   line-height: 2rem;

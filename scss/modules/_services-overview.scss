@@ -136,9 +136,6 @@ section.services-overview {
         height: 100%;
         object-fit: cover;
         transition: opacity 100ms ease-in-out;
-        @include smartphone {
-          position: relative;
-        }
       }
     }
   }
