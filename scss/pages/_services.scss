@@ -5,6 +5,10 @@ section.services-introduction {
   justify-content: flex-end;
   padding: 10% 2rem;
   height: 40vh;
+  @include smartphone-landscape {
+    min-height: 20rem;
+    padding: 10% 2rem 5%;
+  }
   @include tablet-and-desktop {
     padding: 10rem 2rem;
     min-height: 43rem;

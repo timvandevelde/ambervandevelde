@@ -77,10 +77,10 @@ section.history {
 
     div.content {
       margin-top: 3rem;
-      max-width: 48rem;
       @include tablet-and-desktop {
         margin-right: 3rem;
         margin-left: 3rem;
+        max-width: 48rem;
       }
 
       p {
@@ -129,10 +129,10 @@ section.history {
     }
     div.content {
       margin: 0;
-      max-width: 40rem;
       height: 32rem;
       @include tablet-and-desktop {
         width: 100%;
+        max-width: 40rem;
         margin: 28rem 3rem 0;
       }
       figure {

@@ -69,7 +69,7 @@ nav.main-navigation {
     }
 
     figure.logo {
-      left: 6rem;
+      left: 5%;
     }
 
     div.menu-main-menu-container ul li,
@@ -139,6 +139,9 @@ nav.main-navigation {
       justify-content: center;
       padding: 2% 15% 4%;
     }
+    @include smartphone-landscape {
+      padding: 2% 15% 4% 30%;
+    }
   }
 
   figure.logo {
@@ -193,12 +196,17 @@ nav.main-navigation {
     height: 0.2rem;
     background: white;
     transform: translateY(5rem);
+    @include smartphone-landscape {
+      display: none;
+    }
   }
 
   div.menu-social {
     margin: 2rem 0;
     transform: translateY(5rem);
-
+    @include smartphone-landscape {
+      display: none;
+    }
     a {
       color: white;
     }

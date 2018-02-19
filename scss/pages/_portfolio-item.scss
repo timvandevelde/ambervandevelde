@@ -1,8 +1,12 @@
 .post.category-portfolio {
 
   header {
-    padding-top: 16rem;
-    margin-bottom: 8rem;
+    padding-top: 10rem;
+    margin-bottom: 4rem;
+    @include tablet-and-desktop {
+      padding-top: 16rem;
+      margin-bottom: 8rem;
+    }
 
     .page-width {
       display: flex;
