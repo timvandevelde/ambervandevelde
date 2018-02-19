@@ -1152,7 +1152,10 @@ section.services article.service {
 }
 @media screen and (max-width: 479px) {
   section.services article.service {
-    padding: 6rem 0;
+    padding: 3rem 0;
+  }
+  section.services article.service:first-of-type {
+    padding-top: 6rem;
   }
 }
 section.services article.service.service-right header {
