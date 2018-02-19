@@ -37,7 +37,7 @@
       @include smartphone {
         margin-bottom: 4rem;
       }
-      @include tablet-and-desktop {
+      @include desktop {
         width: 40%;
         margin: 0 2.5%;
       }
@@ -46,7 +46,7 @@
     .value-list {
       margin: 2rem 0;
       flex-grow: 1;
-      @include tablet-and-desktop {
+      @include desktop {
         margin: 0 2.5%;
         width: 40%;
       }

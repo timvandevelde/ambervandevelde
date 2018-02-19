@@ -3,7 +3,7 @@
   header {
     padding-top: 10rem;
     margin-bottom: 4rem;
-    @include tablet-and-desktop {
+    @include desktop {
       padding-top: 16rem;
       margin-bottom: 8rem;
     }
@@ -30,7 +30,7 @@
       .tags {
         margin-top: 2rem;
         font-size: 1.3rem;
-        @include tablet-and-desktop {
+        @include desktop {
           margin-top: -3.4rem;
         }
 
