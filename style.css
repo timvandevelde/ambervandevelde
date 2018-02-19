@@ -542,6 +542,7 @@ h2, .h2 {
   }
 }
 h3, .h3 {
+  margin: 0 0 3.5rem;
   font-family: 'Playfair-Display', sans-serif;
   font-size: 5rem;
   font-weight: 900;
@@ -1249,6 +1250,10 @@ ul.arrow-list li {
   ul.arrow-list li {
     margin-right: 0;
   }
+}
+section.call-to-action {
+  padding: 3rem 0;
+  text-align: center;
 }
 div.close, .mfp-content .mfp-close {
   position: fixed;
