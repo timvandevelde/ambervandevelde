@@ -8,6 +8,10 @@
   section.portfolio-full {
     @include tablet-and-desktop {
       height: 100vh;
+
+      img {
+        display: block;
+      }
     }
 
     img {
