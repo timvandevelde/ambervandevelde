@@ -17,7 +17,7 @@
           'post_type' => 'page',
           'post_parent' => $services->ID,
           'post__not_in' => array($post->ID),
-          'orderby'   => 'meta_value',
+          'orderby'   => 'menu_order',
           'order' => 'ASC',
         ));
 

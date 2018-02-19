@@ -1872,6 +1872,11 @@ div.menu-social a.icon-facebook {
   align-items: center;
   flex-grow: 1;
 }
+@media screen and (max-width: 479px) {
+  .values .page-width > blockquote {
+    margin-bottom: 4rem;
+  }
+}
 @media screen and (min-width: 480px) {
   .values .page-width > blockquote {
     width: 40%;
