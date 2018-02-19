@@ -109,6 +109,9 @@ section.homepage-portfolio {
 
   h3 {
     text-align: left;
+    @include smartphone {
+      margin-top: 0;
+    }
   }
 
   article.homepage-portfolio-item {
@@ -141,6 +144,6 @@ section.homepage-portfolio {
   }
 
   > a {
-    margin: 5rem auto 3rem;
+    margin: 3rem auto;
   }
 }

@@ -31,17 +31,23 @@ section.services-overview {
       p {
         max-width: 88rem;
         text-align: justify;
+        @include smartphone {
+          text-align: left;
+        }
       }
     }
   }
 
   article.service-thumb {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    padding: 0 3rem 10%;
+    padding: 0 3rem 5rem;
     @include tablet-and-desktop {
-      display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: flex-end;
+      padding: 0 3rem 10%;
     }
     &.digital-design {
       &:after {
@@ -54,6 +60,11 @@ section.services-overview {
         right: 0;
         left: 70%;
         bottom: 32%;
+      }
+      @include smartphone {
+        &:after {
+          display: none;
+        }
       }
       @include tablet-and-desktop {
         .content {
@@ -70,15 +81,22 @@ section.services-overview {
     .content {
       position: relative;
       z-index: 2;
-      margin: 0 6.5rem 2rem 0;
-      max-width: 35rem;
+      order: 2;
+      @include tablet-and-desktop {
+        margin: 0 6.5rem 2rem 0;
+        max-width: 35rem;
+        order: 1;
 
-      h3 {
-        margin-bottom: 3.5rem;
+        h3 {
+          margin-bottom: 3.5rem;
+        }
       }
 
       p {
         text-align: justify;
+        @include smartphone {
+          text-align: left;
+        }
       }
     }
 
@@ -91,8 +109,10 @@ section.services-overview {
 
       @include smartphone {
         margin: 3rem 0;
-        width: calc(100% + 5rem);
-        left: -2.5rem;
+        width: calc(100% + 6rem);
+        padding: 0;
+        height: auto;
+        left: -3rem;
       }
 
       a {
@@ -109,6 +129,9 @@ section.services-overview {
         height: 100%;
         object-fit: cover;
         transition: opacity 100ms ease-in-out;
+        @include smartphone {
+          position: relative;
+        }
       }
     }
   }
