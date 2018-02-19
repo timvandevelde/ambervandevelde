@@ -2117,6 +2117,7 @@ section.homepage-portfolio > a {
   justify-content: space-between;
 }
 .post.category-portfolio header .page-width h1 {
+  margin: 2rem 0 1rem;
   width: 100%;
 }
 .post.category-portfolio header .page-width h1 a {
@@ -2129,6 +2130,10 @@ section.homepage-portfolio > a {
 .post.category-portfolio header .page-width .tags {
   margin-top: -3.4rem;
   font-size: 1.3rem;
+}
+.post.category-portfolio header .page-width .tags h6 {
+  margin: 0 0 0.9rem;
+  font-size: 1.2rem;
 }
 .post.category-portfolio header .page-width .tags ul {
   padding: 0;
