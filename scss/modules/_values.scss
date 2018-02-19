@@ -44,10 +44,10 @@
     }
 
     .value-list {
-      margin: 2rem 0;
+      padding: 0 3rem;
       flex-grow: 1;
       @include desktop {
-        margin: 0 2.5%;
+        padding: 0 2.5%;
         width: 40%;
       }
       ul {

@@ -119,6 +119,8 @@ section.services-overview {
         padding: 0;
         height: auto;
         left: -3rem;
+        max-height: 30rem;
+        overflow: hidden;
       }
 
       a {
