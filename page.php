@@ -12,7 +12,7 @@
       $services =  get_page_by_title( 'Services' );
       if ($post->post_parent == $services->ID) {
 
-        echo "<section class='services-cta scroll-section'><h4>Andere services</h4>";
+        echo "<section class='services-cta'><h4>Andere services</h4>";
         $services_children = new WP_Query( array(
           'post_type' => 'page',
           'post_parent' => $services->ID,
