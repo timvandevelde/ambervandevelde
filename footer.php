@@ -22,18 +22,17 @@
       </svg>
     </a>
   </figure>
-  <section>
-    <section class="footer-menu">
-      <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-    </section>
-    <a href="" class="phonenumber">+31 (0) 6 18 67 54 63</a>
-    <div class="social">
-      <a href="https://www.facebook.com/amberlovesdesign/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/facebook.svg"></a>
-      <a href="https://www.instragram.com/amberlovesdesign/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/instagram.svg"></a>
-      <a href="https://pinterest.com/amberlovesdesign/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/pinterest.svg"></a>
-    </div>
-    <a href="#" class="button fill"><span>Neem contact op</span></a>
+  <section class="footer-menu">
+    <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
   </section>
+  <a href="" class="phonenumber">+31 (0) 6 18 67 54 63</a>
+  <div class="social">
+    <a href="https://www.linkedin.com/in/amber-van-de-velde"><span class="icon-linkedin"></span></a>
+    <a href="https://www.facebook.com/amberlovesdesign/"><span class="icon-facebook"></span></a>
+    <a href="https://www.instagram.com/amberlovesdesign/"><span class="icon-instagram"></span></a>
+  </div>
+  <a href="#" class="button fill desktop-hidden"><span>Mail</span></a>
+  <a href="#" class="button fill mobile-hidden"><span>Neem contact op</span></a>
 
 </div>
 </footer>

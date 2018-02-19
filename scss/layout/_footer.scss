@@ -1,7 +1,8 @@
 footer.main-footer {
-  padding: 3.5rem;
   background: white;
-
+  @include tablet-and-desktop {
+    padding: 3.5rem;
+  }
   .page-width {
     display: flex;
     flex-wrap: wrap;
@@ -11,65 +12,81 @@ footer.main-footer {
 
     figure.logo {
       max-width: 13rem;
-
+      margin: 1rem;
+      @include smartphone {
+        max-width: 9rem;
+      }
       svg {
         width: 100%;
       }
     }
 
-    > section {
+    div.social {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
+      margin: 1rem;
 
-      div.social {
+      a {
         display: flex;
-        margin: 1rem 2rem;
-
-        a {
-          display: block;
-          margin: 0 0.5rem;
-
-          img {
-            display: block;
-          }
-        }
-      }
-
-      section.footer-menu {
-        ul {
-          list-style: none;
-          margin: 2rem 0;
-          padding: 0;
-
-          li {
-            display: inline-block;
-            margin: 0 1.5rem;
-
-            a {
-              padding: 0.2rem 0;
-              color: $body-font-color;
-              font-size: 1.1rem;
-              text-decoration: none;
-              text-transform: uppercase;
-              letter-spacing: 0.2rem;
-              font-weight: bold;
-              @include line-hover($body-font-color, 0.1rem);
-            }
-          }
-        }
-      }
-      a.phonenumber {
-        margin: 1rem 2rem;
-        font-weight: 300;
+        justify-content: center;
+        align-items: center;
+        width: 3.8rem;
+        height: 3.8rem;
+        margin: 0 0.5rem;
+        border: 0.1rem solid black;
         text-decoration: none;
+        opacity: 1;
+        &:hover span {
+          opacity: 0.7;
+          transform: scale(1.2);
+        }
+        span {
+          display: block;
+          line-height: 2rem;
+          transition: all 100ms;
+          &.icon-facebook {
+            font-size: 1.4rem;
+          }
+        }
       }
-      a.button {
-        margin: 1rem;
-        font-size: 1.1rem;
-        font-weight: bold;
+    }
+
+    section.footer-menu {
+      margin: 1rem;
+      @include smartphone {
+        display: none;
       }
+
+      ul {
+        list-style: none;
+        margin: 2rem 0;
+        padding: 0;
+
+        li {
+          display: inline-block;
+          margin: 0 1.5rem;
+
+          a {
+            padding: 0.2rem 0;
+            color: $body-font-color;
+            font-size: 1.1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            font-weight: bold;
+            @include line-hover($body-font-color, 0.1rem);
+          }
+        }
+      }
+    }
+    a.phonenumber {
+      margin: 1rem;
+      font-weight: 300;
+      text-decoration: none;
+    }
+    a.button {
+      margin: 1rem;
+      font-size: 1.1rem;
+      font-weight: bold;
     }
   }
 }

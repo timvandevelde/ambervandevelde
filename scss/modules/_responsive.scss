@@ -1,0 +1,11 @@
+.desktop-hidden {
+  @include tablet-and-desktop {
+    display: none;
+  }
+}
+
+.mobile-hidden {
+  @include smartphone {
+    display: none;
+  }
+}

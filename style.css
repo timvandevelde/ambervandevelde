@@ -751,8 +751,12 @@ body.category .masonry-articles article.masonry-article .description a p {
   max-height: 60vh;
 }
 footer.main-footer {
-  padding: 3.5rem;
   background: white;
+}
+@media screen and (min-width: 480px) {
+  footer.main-footer {
+    padding: 3.5rem;
+  }
 }
 footer.main-footer .page-width {
   display: flex;
@@ -763,37 +767,61 @@ footer.main-footer .page-width {
 }
 footer.main-footer .page-width figure.logo {
   max-width: 13rem;
+  margin: 1rem;
+}
+@media screen and (max-width: 479px) {
+  footer.main-footer .page-width figure.logo {
+    max-width: 9rem;
+  }
 }
 footer.main-footer .page-width figure.logo svg {
   width: 100%;
 }
-footer.main-footer .page-width > section {
+footer.main-footer .page-width div.social {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  margin: 1rem;
+}
+footer.main-footer .page-width div.social a {
+  display: flex;
+  justify-content: center;
   align-items: center;
-}
-footer.main-footer .page-width > section div.social {
-  display: flex;
-  margin: 1rem 2rem;
-}
-footer.main-footer .page-width > section div.social a {
-  display: block;
+  width: 3.8rem;
+  height: 3.8rem;
   margin: 0 0.5rem;
+  border: 0.1rem solid black;
+  text-decoration: none;
+  opacity: 1;
 }
-footer.main-footer .page-width > section div.social a img {
+footer.main-footer .page-width div.social a:hover span {
+  opacity: 0.7;
+  transform: scale(1.2);
+}
+footer.main-footer .page-width div.social a span {
   display: block;
+  line-height: 2rem;
+  transition: all 100ms;
 }
-footer.main-footer .page-width > section section.footer-menu ul {
+footer.main-footer .page-width div.social a span.icon-facebook {
+  font-size: 1.4rem;
+}
+footer.main-footer .page-width section.footer-menu {
+  margin: 1rem;
+}
+@media screen and (max-width: 479px) {
+  footer.main-footer .page-width section.footer-menu {
+    display: none;
+  }
+}
+footer.main-footer .page-width section.footer-menu ul {
   list-style: none;
   margin: 2rem 0;
   padding: 0;
 }
-footer.main-footer .page-width > section section.footer-menu ul li {
+footer.main-footer .page-width section.footer-menu ul li {
   display: inline-block;
   margin: 0 1.5rem;
 }
-footer.main-footer .page-width > section section.footer-menu ul li a {
+footer.main-footer .page-width section.footer-menu ul li a {
   padding: 0.2rem 0;
   color: #000;
   font-size: 1.1rem;
@@ -803,10 +831,10 @@ footer.main-footer .page-width > section section.footer-menu ul li a {
   font-weight: bold;
   position: relative;
 }
-footer.main-footer .page-width > section section.footer-menu ul li a:hover:after {
+footer.main-footer .page-width section.footer-menu ul li a:hover:after {
   transform: scaleX(1);
 }
-footer.main-footer .page-width > section section.footer-menu ul li a:after {
+footer.main-footer .page-width section.footer-menu ul li a:after {
   content: '';
   position: absolute;
   display: block;
@@ -819,12 +847,12 @@ footer.main-footer .page-width > section section.footer-menu ul li a:after {
   transform-origin: bottom left 0;
   transition: transform 150ms ease-out;
 }
-footer.main-footer .page-width > section a.phonenumber {
-  margin: 1rem 2rem;
+footer.main-footer .page-width a.phonenumber {
+  margin: 1rem;
   font-weight: 300;
   text-decoration: none;
 }
-footer.main-footer .page-width > section a.button {
+footer.main-footer .page-width a.button {
   margin: 1rem;
   font-size: 1.1rem;
   font-weight: bold;
@@ -1437,6 +1465,16 @@ header.main-header figure.logo {
 /* content animate out */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
+}
+@media screen and (min-width: 480px) {
+  .desktop-hidden {
+    display: none;
+  }
+}
+@media screen and (max-width: 479px) {
+  .mobile-hidden {
+    display: none;
+  }
 }
 a.scroll {
   position: absolute;
