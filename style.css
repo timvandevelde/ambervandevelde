@@ -747,6 +747,7 @@ body.category .masonry-articles article.masonry-article .description a p {
 }
 .entry-content section.portfolio-section img {
   display: block;
+  width: 100%;
   max-width: 112rem;
   margin: 0 auto 10%;
 }
@@ -1817,6 +1818,11 @@ section.services-overview article.service-thumb figure img {
   padding: 10rem 0;
   background: black;
   color: white;
+}
+@media screen and (max-width: 479px) {
+  .single-post-navigation.nav-below > div:first-child {
+    margin-bottom: 5rem;
+  }
 }
 .single-post-navigation.nav-below > div {
   flex-grow: 1;

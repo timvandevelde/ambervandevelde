@@ -23,7 +23,11 @@
   padding: 10rem 0;
   background: black;
   color: white;
-
+  @include smartphone {
+    > div:first-child {
+      margin-bottom: 5rem;
+    }
+  }
   > div {
     flex-grow: 1;
     flex-basis: 50%;
