@@ -1257,7 +1257,6 @@ ul.arrow-list li {
   padding: 1.4rem 1rem 1.2rem 3rem;
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
   background: url('images/arrow-right.svg') 0 2.1rem no-repeat;
-  text-align: justify;
 }
 @media screen and (max-width: 479px) {
   ul.arrow-list li {
@@ -1856,6 +1855,11 @@ div.menu-social a.icon-facebook {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+@media screen and (max-width: 479px) {
+  .values .page-width {
+    display: block;
+  }
+}
 .values .page-width > figure {
   display: none;
   flex-grow: 1;
@@ -1866,14 +1870,22 @@ div.menu-social a.icon-facebook {
 .values .page-width > blockquote {
   display: flex;
   align-items: center;
-  max-width: 39rem;
+  flex-grow: 1;
+}
+@media screen and (min-width: 480px) {
+  .values .page-width > blockquote {
+    width: 40%;
+    margin: 0 2.5%;
+  }
 }
 .values .page-width .value-list {
-  margin: 0 0 0 5rem;
+  margin: 2rem 0;
+  flex-grow: 1;
 }
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 480px) {
   .values .page-width .value-list {
-    margin: 2rem 0;
+    margin: 0 2.5%;
+    width: 40%;
   }
 }
 .values .page-width .value-list ul li {

@@ -8,7 +8,6 @@ ul.arrow-list {
     padding: 1.4rem 1rem 1.2rem 3rem;
     border-bottom: 0.1rem solid rgba($body-font-color, 0.2);
     background: url('images/arrow-right.svg') 0 2.1rem no-repeat;
-    text-align: justify;
     @include smartphone {
       margin-right: 0;
     }
