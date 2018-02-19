@@ -838,9 +838,11 @@ header.main-header {
 }
 @media screen and (max-width: 479px) {
   header.main-header {
-    background: white;
     height: 5rem;
+  }
+  body.sticky header.main-header {
     box-shadow: 0 0 10rem rgba(0, 0, 0, 0.1);
+    background: white;
   }
 }
 header.page-header {
