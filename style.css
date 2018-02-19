@@ -762,15 +762,17 @@ body.category .masonry-articles article.masonry-article .description a p {
   width: auto;
   max-height: 60vh;
 }
-.entry-content section.portfolio-mailing {
+.entry-content section.portfolio-mailing div.container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin: 0 auto;
+  max-width: 92rem;
 }
-.entry-content section.portfolio-mailing img:first-child {
+.entry-content section.portfolio-mailing div.container img:first-child {
   width: 55%;
 }
-.entry-content section.portfolio-mailing img:last-child {
+.entry-content section.portfolio-mailing div.container img:last-child {
   width: 25%;
 }
 footer.main-footer {

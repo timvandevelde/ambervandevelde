@@ -40,15 +40,19 @@
   }
 
   section.portfolio-mailing {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    div.container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 0 auto;
+      max-width: 92rem;
 
-    img:first-child {
-      width: 55%;
-    }
-    img:last-child {
-      width: 25%;
+      img:first-child {
+        width: 55%;
+      }
+      img:last-child {
+        width: 25%;
+      }
     }
   }
 }
