@@ -600,6 +600,9 @@ p.introduction {
 span.underline {
   text-decoration: underline;
 }
+span.nowrap {
+  white-space: nowrap;
+}
 em {
   font-family: 'Mighty-River', serif;
 }
@@ -1226,6 +1229,11 @@ section.services article.service .content figure {
   margin-bottom: 5rem;
   width: 100%;
   max-width: 80rem;
+}
+@media screen and (max-width: 479px) {
+  section.services article.service .content figure {
+    margin-bottom: 2rem;
+  }
 }
 section.services article.service .content figure img {
   width: 100%;

@@ -106,8 +106,13 @@ p {
   }
 }
 
-span.underline {
-  text-decoration: underline;
+span {
+  &.underline {
+    text-decoration: underline;
+  }
+  &.nowrap {
+    white-space: nowrap;
+  }
 }
 
 em {

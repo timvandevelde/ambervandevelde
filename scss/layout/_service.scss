@@ -91,6 +91,9 @@ section.services {
         margin-bottom: 5rem;
         width: 100%;
         max-width: 80rem;
+        @include smartphone {
+          margin-bottom: 2rem;
+        }
         img {
           width: 100%;
           height: 100%;
