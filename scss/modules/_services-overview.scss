@@ -7,6 +7,7 @@ section.services-overview {
   section.services-overview-introduction {
     position: relative;
     padding-top: 12rem;
+    padding-bottom: 12rem;
     @include smartphone {
       padding-top: 4rem;
       padding-bottom: 4rem;
@@ -36,27 +37,40 @@ section.services-overview {
 
   article.service-thumb {
     position: relative;
-    margin-bottom: 5rem;
+    padding: 0 3rem 10%;
     @include tablet-and-desktop {
       display: flex;
       justify-content: center;
-      min-height: 100vh;
-      align-items: center;
+      align-items: flex-end;
     }
     &.digital-design {
+      &:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        display: block;
+        background: $snow;
+        top: 16rem;
+        right: 0;
+        left: 70%;
+        bottom: 32%;
+      }
       @include tablet-and-desktop {
-        left: -5%;
         .content {
-          margin: 0 0 0 6.5rem;
+          align-self: flex-start;
+          margin: 0 0 2rem 6.5rem;
           order: 2;
         }
       }
+    }
+    &.content-social-media .content {
+      max-width: 44.1rem;
     }
 
     .content {
       position: relative;
       z-index: 2;
-      margin: 0 6.5rem 0 0;
+      margin: 0 6.5rem 2rem 0;
       max-width: 35rem;
 
       h3 {
@@ -72,18 +86,29 @@ section.services-overview {
       position: relative;
       z-index: 1;
       margin: 0;
-      width: 100%;
-      max-width: 58rem;
-      max-height: 35rem;
+      padding-top: 30%;
+      width: 50%;
+
       @include smartphone {
         margin: 3rem 0;
         width: calc(100% + 5rem);
         left: -2.5rem;
       }
+
+      a {
+        display: block;
+        &:hover img {
+          opacity: 0.8;
+        }
+      }
+
       img {
+        position: absolute;
+        top: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: opacity 100ms ease-in-out;
       }
     }
   }

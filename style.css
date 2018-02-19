@@ -743,6 +743,85 @@ body.category .masonry-articles article.masonry-article .description a p {
   width: auto;
   max-height: 60vh;
 }
+footer.main-footer {
+  padding: 3.5rem;
+  background: white;
+}
+footer.main-footer .page-width {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 130rem;
+}
+footer.main-footer .page-width figure.logo {
+  max-width: 13rem;
+}
+footer.main-footer .page-width figure.logo svg {
+  width: 100%;
+}
+footer.main-footer .page-width > section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+footer.main-footer .page-width > section div.social {
+  display: flex;
+  margin: 1rem 2rem;
+}
+footer.main-footer .page-width > section div.social a {
+  display: block;
+  margin: 0 0.5rem;
+}
+footer.main-footer .page-width > section div.social a img {
+  display: block;
+}
+footer.main-footer .page-width > section section.footer-menu ul {
+  list-style: none;
+  margin: 2rem 0;
+  padding: 0;
+}
+footer.main-footer .page-width > section section.footer-menu ul li {
+  display: inline-block;
+  margin: 0 1.5rem;
+}
+footer.main-footer .page-width > section section.footer-menu ul li a {
+  padding: 0.2rem 0;
+  color: #000;
+  font-size: 1.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  position: relative;
+}
+footer.main-footer .page-width > section section.footer-menu ul li a:hover:after {
+  transform: scaleX(1);
+}
+footer.main-footer .page-width > section section.footer-menu ul li a:after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  height: 0.1rem;
+  width: 100%;
+  background: #000;
+  transform: scaleX(0);
+  transform-origin: bottom left 0;
+  transition: transform 150ms ease-out;
+}
+footer.main-footer .page-width > section a.phonenumber {
+  margin: 1rem 2rem;
+  font-weight: 300;
+  text-decoration: none;
+}
+footer.main-footer .page-width > section a.button {
+  margin: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
 header.main-header {
   position: fixed;
   width: 100%;
@@ -1008,84 +1087,126 @@ section.black {
 section.grafite {
   background: rgba(0, 0, 0, 0.9);
 }
-footer.main-footer {
-  padding: 3.5rem;
+section.services-introduction {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10rem 2rem;
+  height: 40vh;
+  min-height: 43rem;
+}
+section.services-introduction h1 {
+  margin: 0 auto;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  width: 100%;
+  max-width: 108rem;
+}
+section.services-introduction h1.small {
+  max-width: 82rem;
+}
+@media screen and (max-width: 479px) {
+  section.services-introduction h1 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+section.services {
   background: white;
 }
-footer.main-footer .page-width {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 130rem;
-}
-footer.main-footer .page-width figure.logo {
-  max-width: 13rem;
-}
-footer.main-footer .page-width figure.logo svg {
-  width: 100%;
-}
-footer.main-footer .page-width > section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-footer.main-footer .page-width > section div.social {
-  display: flex;
-  margin: 1rem 2rem;
-}
-footer.main-footer .page-width > section div.social a {
-  display: block;
-  margin: 0 0.5rem;
-}
-footer.main-footer .page-width > section div.social a img {
-  display: block;
-}
-footer.main-footer .page-width > section section.footer-menu ul {
-  list-style: none;
-  margin: 2rem 0;
-  padding: 0;
-}
-footer.main-footer .page-width > section section.footer-menu ul li {
-  display: inline-block;
-  margin: 0 1.5rem;
-}
-footer.main-footer .page-width > section section.footer-menu ul li a {
-  padding: 0.2rem 0;
-  color: #000;
-  font-size: 1.1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  font-weight: bold;
+section.services article.service {
+  padding: 14rem 0;
   position: relative;
 }
-footer.main-footer .page-width > section section.footer-menu ul li a:hover:after {
-  transform: scaleX(1);
+section.services article.service.service-right header {
+  text-align: right;
 }
-footer.main-footer .page-width > section section.footer-menu ul li a:after {
-  content: '';
-  position: absolute;
-  display: block;
-  left: 0;
-  bottom: 0;
-  height: 0.1rem;
+section.services article.service.service-right header:after {
+  top: 30rem;
+  left: 50%;
+  right: 0;
+}
+section.services article.service.service-right .content blockquote {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+section.services article.service.service-right .content blockquote span {
   width: 100%;
-  background: #000;
-  transform: scaleX(0);
-  transform-origin: bottom left 0;
-  transition: transform 150ms ease-out;
+  max-width: 44rem;
+  flex-shrink: 1;
 }
-footer.main-footer .page-width > section a.phonenumber {
-  margin: 1rem 2rem;
-  font-weight: 300;
-  text-decoration: none;
+section.services article.service.service-right .content blockquote:after {
+  content: "";
+  display: block;
+  flex-shrink: 100;
+  width: 15rem;
 }
-footer.main-footer .page-width > section a.button {
-  margin: 1rem;
-  font-size: 1.1rem;
+section.services article.service.service-left header:after {
+  top: 30rem;
+  left: 0;
+  right: 50%;
+}
+section.services article.service.service-left .content figure {
+  align-self: flex-end;
+}
+section.services article.service header {
+  margin: 0 auto;
+  padding: 0 3rem;
+  max-width: 106rem;
+}
+section.services article.service header:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  background: #f3f2f0;
+  height: 34rem;
+}
+section.services article.service header h2, section.services article.service header em {
+  position: relative;
+  z-index: 2;
+}
+section.services article.service header em {
+  display: block;
+  margin-bottom: 6rem;
+  font-family: 'Mighty-River', serif;
+  font-size: 4rem;
+}
+section.services article.service .content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+  margin: 5rem auto;
+  max-width: 96rem;
+}
+section.services article.service .content figure {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 5rem;
+  width: 100%;
+  max-width: 80rem;
+}
+section.services article.service .content figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.services article.service .content p {
+  text-align: justify;
+}
+section.services article.service .content p.call-to-action {
+  margin: 1rem 0 3.5rem;
   font-weight: bold;
+}
+section.services article.service .content p, section.services article.service .content h3, section.services article.service .content ul, section.services article.service .content blockquote {
+  align-self: center;
+  width: 100%;
+  max-width: 47rem;
+}
+section.services article.service .content h3 {
+  margin: 3rem 0 2rem;
 }
 ul.arrow-list {
   list-style: none;
@@ -1387,127 +1508,6 @@ header.main-header figure.logo {
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
 }
-section.services-introduction {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 10rem 2rem;
-  height: 40vh;
-  min-height: 43rem;
-}
-section.services-introduction h1 {
-  margin: 0 auto;
-  padding-right: 4rem;
-  padding-left: 4rem;
-  width: 100%;
-  max-width: 108rem;
-}
-section.services-introduction h1.small {
-  max-width: 82rem;
-}
-@media screen and (max-width: 479px) {
-  section.services-introduction h1 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-}
-section.services {
-  background: white;
-}
-section.services article.service {
-  padding: 14rem 0;
-  position: relative;
-}
-section.services article.service.service-right header {
-  text-align: right;
-}
-section.services article.service.service-right header:after {
-  top: 30rem;
-  left: 50%;
-  right: 0;
-}
-section.services article.service.service-right .content blockquote {
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
-}
-section.services article.service.service-right .content blockquote span {
-  width: 100%;
-  max-width: 44rem;
-  flex-shrink: 1;
-}
-section.services article.service.service-right .content blockquote:after {
-  content: "";
-  display: block;
-  flex-shrink: 100;
-  width: 15rem;
-}
-section.services article.service.service-left header:after {
-  top: 30rem;
-  left: 0;
-  right: 50%;
-}
-section.services article.service.service-left .content figure {
-  align-self: flex-end;
-}
-section.services article.service header {
-  margin: 0 auto;
-  padding: 0 3rem;
-  max-width: 106rem;
-}
-section.services article.service header:after {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  background: #f3f2f0;
-  height: 34rem;
-}
-section.services article.service header h2, section.services article.service header em {
-  position: relative;
-  z-index: 2;
-}
-section.services article.service header em {
-  display: block;
-  margin-bottom: 6rem;
-  font-family: 'Mighty-River', serif;
-  font-size: 4rem;
-}
-section.services article.service .content {
-  display: flex;
-  flex-direction: column;
-  padding: 0 3rem;
-  margin: 5rem auto;
-  max-width: 96rem;
-}
-section.services article.service .content figure {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 5rem;
-  width: 100%;
-  max-width: 80rem;
-}
-section.services article.service .content figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-section.services article.service .content p {
-  text-align: justify;
-}
-section.services article.service .content p.call-to-action {
-  margin: 1rem 0 3.5rem;
-  font-weight: bold;
-}
-section.services article.service .content p, section.services article.service .content h3, section.services article.service .content ul, section.services article.service .content blockquote {
-  align-self: center;
-  width: 100%;
-  max-width: 47rem;
-}
-section.services article.service .content h3 {
-  margin: 3rem 0 2rem;
-}
 .services-cta {
   padding: 10rem 0;
   background: #f3f2f0;
@@ -1577,6 +1577,7 @@ section.services-overview {
 section.services-overview section.services-overview-introduction {
   position: relative;
   padding-top: 12rem;
+  padding-bottom: 12rem;
 }
 @media screen and (max-width: 479px) {
   section.services-overview section.services-overview-introduction {
@@ -1605,29 +1606,40 @@ section.services-overview section.services-overview-introduction > div p {
 }
 section.services-overview article.service-thumb {
   position: relative;
-  margin-bottom: 5rem;
+  padding: 0 3rem 10%;
 }
 @media screen and (min-width: 800px) {
   section.services-overview article.service-thumb {
     display: flex;
     justify-content: center;
-    min-height: 100vh;
-    align-items: center;
+    align-items: flex-end;
   }
 }
+section.services-overview article.service-thumb.digital-design:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  display: block;
+  background: #f3f2f0;
+  top: 16rem;
+  right: 0;
+  left: 70%;
+  bottom: 32%;
+}
 @media screen and (min-width: 800px) {
-  section.services-overview article.service-thumb.digital-design {
-    left: -5%;
-  }
   section.services-overview article.service-thumb.digital-design .content {
-    margin: 0 0 0 6.5rem;
+    align-self: flex-start;
+    margin: 0 0 2rem 6.5rem;
     order: 2;
   }
+}
+section.services-overview article.service-thumb.content-social-media .content {
+  max-width: 44.1rem;
 }
 section.services-overview article.service-thumb .content {
   position: relative;
   z-index: 2;
-  margin: 0 6.5rem 0 0;
+  margin: 0 6.5rem 2rem 0;
   max-width: 35rem;
 }
 section.services-overview article.service-thumb .content h3 {
@@ -1640,9 +1652,8 @@ section.services-overview article.service-thumb figure {
   position: relative;
   z-index: 1;
   margin: 0;
-  width: 100%;
-  max-width: 58rem;
-  max-height: 35rem;
+  padding-top: 30%;
+  width: 50%;
 }
 @media screen and (max-width: 479px) {
   section.services-overview article.service-thumb figure {
@@ -1651,10 +1662,19 @@ section.services-overview article.service-thumb figure {
     left: -2.5rem;
   }
 }
+section.services-overview article.service-thumb figure a {
+  display: block;
+}
+section.services-overview article.service-thumb figure a:hover img {
+  opacity: 0.8;
+}
 section.services-overview article.service-thumb figure img {
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: opacity 100ms ease-in-out;
 }
 div.menu-social {
   position: relative;
@@ -1750,8 +1770,7 @@ section.homepage-introduction {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
-  min-height: 75rem;
+  min-height: 70vh;
 }
 @media screen and (max-width: 479px) {
   section.homepage-introduction {
@@ -1770,7 +1789,7 @@ section.homepage-introduction .vertical-wrapper {
 @media screen and (max-width: 479px) {
   section.homepage-introduction .vertical-wrapper {
     display: block;
-    margin: 0;
+    margin: 0 0 5rem;
     overflow: hidden;
     width: 100%;
   }
@@ -1779,7 +1798,7 @@ section.homepage-introduction .vertical-wrapper div.content {
   position: relative;
   z-index: 5;
   max-width: 44%;
-  margin-right: 5rem;
+  margin-right: 7%;
   padding-top: 5rem;
 }
 @media screen and (max-width: 479px) {
@@ -1800,17 +1819,29 @@ section.homepage-introduction .vertical-wrapper div.content h1 {
 }
 @media screen and (max-width: 479px) {
   section.homepage-introduction .vertical-wrapper div.content h1 {
+    margin-bottom: 90%;
     width: 100%;
   }
 }
 section.homepage-introduction .vertical-wrapper figure {
   position: relative;
   flex-basis: 44rem;
-  align-self: flex-start;
+  align-self: flex-end;
 }
 @media screen and (max-width: 479px) {
   section.homepage-introduction .vertical-wrapper figure {
-    margin: -20% -30% 20% 30%;
+    position: absolute;
+    top: 24%;
+    right: 3rem;
+    left: 20%;
+    text-align: right;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 960px) {
+  section.homepage-introduction .vertical-wrapper figure {
+    align-self: center;
+    text-align: right;
+    margin-right: -10rem;
   }
 }
 section.homepage-introduction .vertical-wrapper figure img {
@@ -1829,6 +1860,11 @@ section.homepage-introduction .vertical-wrapper figure .vertical-title {
   letter-spacing: 0.3rem;
 }
 @media screen and (max-width: 479px) {
+  section.homepage-introduction .vertical-wrapper figure .vertical-title {
+    display: none;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 960px) {
   section.homepage-introduction .vertical-wrapper figure .vertical-title {
     display: none;
   }

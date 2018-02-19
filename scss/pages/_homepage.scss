@@ -3,8 +3,7 @@ section.homepage-introduction {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
-  min-height: 75rem;
+  min-height: 70vh;
   @include smartphone {
     display: block;
     height: auto;
@@ -19,7 +18,7 @@ section.homepage-introduction {
     margin: 8rem auto 10rem;
     @include smartphone {
       display: block;
-      margin: 0;
+      margin: 0 0 5rem;
       overflow: hidden;
       width: 100%;
     }
@@ -28,7 +27,7 @@ section.homepage-introduction {
       position: relative;
       z-index: 5;
       max-width: 44%;
-      margin-right: 5rem;
+      margin-right: 7%;
       padding-top: 5rem;
       @include smartphone {
         padding: 0;
@@ -46,6 +45,7 @@ section.homepage-introduction {
         letter-spacing: -0.1rem;
         width: 140%;
         @include smartphone {
+          margin-bottom: 90%;
           width: 100%;
         }
       }
@@ -54,9 +54,18 @@ section.homepage-introduction {
     figure {
       position: relative;
       flex-basis: 44rem;
-      align-self: flex-start;
+      align-self: flex-end;
       @include smartphone {
-        margin: -20% -30% 20% 30%;
+        position: absolute;
+        top: 24%;
+        right: 3rem;
+        left: 20%;
+        text-align: right;
+      }
+      @include tablet {
+        align-self: center;
+        text-align: right;
+        margin-right: -10rem;
       }
 
       img {
@@ -75,6 +84,9 @@ section.homepage-introduction {
         text-transform: uppercase;
         letter-spacing: 0.3rem;
         @include smartphone {
+          display: none;
+        }
+        @include tablet {
           display: none;
         }
       }
