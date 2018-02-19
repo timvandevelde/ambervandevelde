@@ -40,7 +40,9 @@
     justify-content: center;
     align-items: center;
     padding: 10%;
-    height: 100vh;
+    @include tablet-and-desktop {
+      height: 100vh;
+    }
 
     img {
       display: block;
