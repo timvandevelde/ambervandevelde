@@ -27,6 +27,12 @@ jQuery( document ).ready(function($) {
     });
   }
 
+  darkSection();
+
+  $(window).on('resize scroll', function() {
+    darkSection();
+  });
+
   if (isMobile == false) {
     $.scrollify({
       section : ".scroll-section",
@@ -63,12 +69,6 @@ jQuery( document ).ready(function($) {
       scale: 1,
       easing: 'ease-out',
     }, 100);
-
-    darkSection();
-
-    $(window).on('resize scroll', function() {
-      darkSection();
-    });
 
   } else {
 

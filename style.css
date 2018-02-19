@@ -888,6 +888,9 @@ header.main-header {
     box-shadow: 0 0 10rem rgba(0, 0, 0, 0.1);
     background: white;
   }
+  body.on-dark.sticky header.main-header {
+    background: none;
+  }
 }
 header.page-header {
   padding-top: 16rem;
