@@ -3,6 +3,17 @@
   @include smartphone {
     padding: 5rem 0;
   }
+  &.values-only .page-width {
+    > blockquote {
+      flex-grow: 0;
+    }
+    .value-list {
+      flex-grow: 0;
+      width: auto;
+    }
+  }
+
+
   .page-width {
     display: flex;
     flex-wrap: wrap;

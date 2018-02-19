@@ -1,6 +1,9 @@
 body.category {
 
   .category-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     background: black;
     padding: 10% 2rem;
     height: 40vh;
@@ -9,16 +12,9 @@ body.category {
       min-height: 43rem;
     }
 
-    .page-width {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      height: 100%;
-
-      h1 {
-        margin-bottom: 10rem;
-        color: white;
-      }
+    h1 {
+      @include page-width;
+      color: white;
     }
   }
 

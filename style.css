@@ -658,6 +658,9 @@ body {
   background: #f9f9f9;
 }
 body.category .category-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   background: black;
   padding: 10% 2rem;
   height: 40vh;
@@ -668,15 +671,22 @@ body.category .category-header {
     min-height: 43rem;
   }
 }
-body.category .category-header .page-width {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 100%;
-}
-body.category .category-header .page-width h1 {
-  margin-bottom: 10rem;
+body.category .category-header h1 {
+  margin: 0 auto;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  width: 100%;
+  max-width: 108rem;
   color: white;
+}
+body.category .category-header h1.small {
+  max-width: 82rem;
+}
+@media screen and (max-width: 479px) {
+  body.category .category-header h1 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
 body.category .masonry-articles {
   padding-top: 8%;
@@ -1893,6 +1903,13 @@ div.menu-social a span.icon-facebook {
   .values {
     padding: 5rem 0;
   }
+}
+.values.values-only .page-width > blockquote {
+  flex-grow: 0;
+}
+.values.values-only .page-width .value-list {
+  flex-grow: 0;
+  width: auto;
 }
 .values .page-width {
   display: flex;

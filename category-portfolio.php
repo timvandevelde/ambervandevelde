@@ -2,10 +2,8 @@
 <section id="content" role="main">
   <div class="vertical-name">Amber van de Velde</div>
   <header class="header category-header scroll-section dark-section">
-    <div class="page-width">
-      <h1 class="entry-title"><?php single_cat_title(); ?></h1>
-      <?php if ( '' != category_description() ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . category_description() . '</div>' ); ?>
-    </div>
+    <h1 class="entry-title"><?php single_cat_title(); ?></h1>
+    <?php if ( '' != category_description() ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . category_description() . '</div>' ); ?>
   </header>
   <section class="articles">
     <div class="page-width masonry-articles scroll-section">
