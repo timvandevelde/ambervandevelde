@@ -2015,6 +2015,11 @@ section.full-size-photo h1.small {
 section.history {
   padding: 10rem 0;
 }
+@media screen and (max-width: 479px) {
+  section.history {
+    padding-bottom: 0;
+  }
+}
 section.history .history-item {
   position: relative;
   margin-bottom: 5rem;
@@ -2030,6 +2035,9 @@ section.history .history-item:before, section.history .history-item:after {
   content: "";
   display: block;
   flex-shrink: 100;
+}
+section.history .history-item:last-child {
+  margin-bottom: 0;
 }
 section.history .history-item.history-item-2:before {
   width: 10%;
@@ -2104,7 +2112,6 @@ section.history .history-item div.content p:last-of-type {
   margin-bottom: 5rem;
 }
 section.history .history-item div.content figure {
-  display: inline-block;
   width: 100%;
   height: 30rem;
   background: #ddd;
