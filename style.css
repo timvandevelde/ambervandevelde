@@ -743,12 +743,15 @@ body.category .masonry-articles article.masonry-article .description a p {
   object-fit: cover;
 }
 .entry-content section.portfolio-section {
-  padding: 10% 10% 0 10%;
+  padding: 10%;
 }
 .entry-content section.portfolio-section img {
   display: block;
   max-width: 112rem;
   margin: 0 auto 10%;
+}
+.entry-content section.portfolio-section img:last-of-type {
+  margin-bottom: 0;
 }
 .entry-content section.portfolio-laptop {
   display: flex;
