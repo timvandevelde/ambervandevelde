@@ -31,7 +31,7 @@
       <?php endwhile; endif; ?>
     </div>
   </section>
-  <section class="services-cta scroll-section">
+  <section class="services-cta">
     <h4>Wat ik voor je kan betekenen</h4>
 
     <?php
