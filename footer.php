@@ -31,8 +31,8 @@
     <a href="https://www.facebook.com/Amber-van-de-Velde-1955938894724190/"><span class="icon-facebook"></span></a>
     <a href="https://www.instagram.com/ambervandevelde.nl/"><span class="icon-instagram"></span></a>
   </div>
-  <a href="#" class="button fill desktop-hidden"><span>Mail</span></a>
-  <a href="#" class="button fill mobile-hidden"><span>Neem contact op</span></a>
+  <a href="mailto:mail@ambervandevelde.nl" class="button fill desktop-hidden"><span>Mail</span></a>
+  <a href="mailto:mail@ambervandevelde.nl" class="button fill mobile-hidden"><span>Neem contact op</span></a>
 
 </div>
 </footer>
