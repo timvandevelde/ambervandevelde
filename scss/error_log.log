@@ -1,2 +1,3 @@
 02/19/18 4:22:20: style.scss - parse error: failed at `width: 40%:` /Users/timvandevelde/Sites/timvandevelde/ambervandevelde/website/wp-content/themes/ambervandevelde/scss/modules/_values.scss on line 22
 02/19/18 4:22:21: style.scss - parse error: failed at `width: 40%:` /Users/timvandevelde/Sites/timvandevelde/ambervandevelde/website/wp-content/themes/ambervandevelde/scss/modules/_values.scss on line 22
+02/20/18 7:26:40: style.scss - parse error: failed at `background; $chalk;` /Users/timvandevelde/Sites/timvandevelde/ambervandevelde/website/wp-content/themes/ambervandevelde/scss/layout/_sections.scss on line 23

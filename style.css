@@ -1297,6 +1297,11 @@ section.black {
 }
 section.grafite {
   background: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+section.chalk {
+  background: #212626;
+  color: white;
 }
 section.services {
   background: white;

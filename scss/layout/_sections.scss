@@ -16,6 +16,11 @@ section {
     color: white;
   }
   &.grafite {
-    background: rgba(0,0,0,0.9);
+    background: $grafite;
+    color: white;
+  }
+  &.chalk {
+    background: $chalk;
+    color: white;
   }
 }
