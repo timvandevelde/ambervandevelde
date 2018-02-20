@@ -25,7 +25,7 @@
   <section class="footer-menu">
     <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
   </section>
-  <a href="" class="phonenumber">+31 (0) 6 18 67 54 63</a>
+  <a href="tel:+31618675463" class="phonenumber">+31 (0) 6 18 67 54 63</a>
   <div class="social">
     <a href="https://www.linkedin.com/in/amber-van-de-velde"><span class="icon-linkedin"></span></a>
     <a href="https://www.facebook.com/Amber-van-de-Velde-1955938894724190/"><span class="icon-facebook"></span></a>
