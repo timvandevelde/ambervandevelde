@@ -611,7 +611,7 @@ a {
   font-weight: bold;
   text-decoration: underline;
 }
-h1 a, h2 a, h3 a {
+h1 a, h2 a, h3 a, h4 a {
   font-weight: 900;
   text-decoration: none;
 }
