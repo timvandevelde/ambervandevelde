@@ -67,4 +67,20 @@
       }
     }
   }
+
+  section.portfolio-split {
+    div.container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 0 auto;
+      max-width: 106rem;
+      img:first-child {
+        width: 40%;
+      }
+      img:last-child {
+        width: 40%;
+      }
+    }
+  }
 }

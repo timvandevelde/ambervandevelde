@@ -807,6 +807,19 @@ body.category .masonry-articles article.masonry-article .description a p {
 .entry-content section.portfolio-mailing div.container img:last-child {
   width: 25%;
 }
+.entry-content section.portfolio-split div.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 106rem;
+}
+.entry-content section.portfolio-split div.container img:first-child {
+  width: 40%;
+}
+.entry-content section.portfolio-split div.container img:last-child {
+  width: 40%;
+}
 footer.main-footer {
   background: white;
   padding: 3.5rem 0;
