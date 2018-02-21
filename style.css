@@ -2158,8 +2158,13 @@ section.homepage-introduction .vertical-wrapper div.content h1 {
 }
 @media screen and (max-width: 768px) {
   section.homepage-introduction .vertical-wrapper div.content h1 {
-    margin-bottom: 30rem;
+    margin-bottom: 75%;
     width: 100%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  section.homepage-introduction .vertical-wrapper div.content h1 {
+    margin-bottom: 40%;
   }
 }
 section.homepage-introduction .vertical-wrapper figure {
@@ -2171,8 +2176,13 @@ section.homepage-introduction .vertical-wrapper figure {
   section.homepage-introduction .vertical-wrapper figure {
     position: absolute;
     top: 25%;
-    height: 28rem;
+    height: 37%;
     left: 30%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  section.homepage-introduction .vertical-wrapper figure {
+    top: 20%;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 960px) {

@@ -46,8 +46,11 @@ section.homepage-introduction {
         letter-spacing: -0.1rem;
         width: 140%;
         @include smartphone {
-          margin-bottom: 30rem;
+          margin-bottom: 75%;
           width: 100%;
+        }
+        @include smartphone-landscape {
+          margin-bottom: 40%;
         }
       }
     }
@@ -59,8 +62,11 @@ section.homepage-introduction {
       @include smartphone {
         position: absolute;
         top: 25%;
-        height: 28rem;
+        height: 37%;
         left: 30%;
+      }
+      @include smartphone-landscape {
+        top: 20%;
       }
       @include tablet {
         align-self: center;
