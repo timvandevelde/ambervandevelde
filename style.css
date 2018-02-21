@@ -2175,7 +2175,7 @@ section.homepage-introduction .vertical-wrapper figure {
 @media screen and (max-width: 768px) {
   section.homepage-introduction .vertical-wrapper figure {
     position: absolute;
-    top: 25%;
+    top: 23%;
     height: 37%;
     left: 30%;
   }
