@@ -714,24 +714,6 @@ body.category .masonry-articles article.masonry-article {
   body.category .masonry-articles article.masonry-article:nth-of-type(2) {
     margin-top: 20rem;
   }
-  body.category .masonry-articles article.masonry-article:nth-of-type(1) figure img {
-    height: 53rem;
-  }
-  body.category .masonry-articles article.masonry-article:nth-of-type(2) figure img {
-    height: 50rem;
-  }
-  body.category .masonry-articles article.masonry-article:nth-of-type(3) figure img {
-    height: 60rem;
-  }
-  body.category .masonry-articles article.masonry-article:nth-of-type(4) figure img {
-    height: 31rem;
-  }
-  body.category .masonry-articles article.masonry-article:nth-of-type(5) figure img {
-    height: 46rem;
-  }
-  body.category .masonry-articles article.masonry-article:nth-of-type(6) figure img {
-    height: 41rem;
-  }
 }
 body.category .masonry-articles article.masonry-article figure img {
   width: 100%;
@@ -2103,7 +2085,7 @@ div.menu-social a span.icon-facebook {
     display: none;
   }
 }
-section.homepage-introduction {
+.homepage-introduction {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2112,28 +2094,28 @@ section.homepage-introduction {
   overflow: hidden;
 }
 @media screen and (max-width: 768px) {
-  section.homepage-introduction {
+  .homepage-introduction {
     display: block;
     height: auto;
     min-height: 0;
     padding-top: 10rem;
   }
 }
-section.homepage-introduction .vertical-wrapper {
+.homepage-introduction .vertical-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
   margin: 12rem auto;
 }
 @media screen and (max-width: 768px) {
-  section.homepage-introduction .vertical-wrapper {
+  .homepage-introduction .vertical-wrapper {
     display: block;
     margin: 0 0 5rem;
     overflow: hidden;
     width: 100%;
   }
 }
-section.homepage-introduction .vertical-wrapper div.content {
+.homepage-introduction .vertical-wrapper div.content {
   position: relative;
   z-index: 5;
   max-width: 44%;
@@ -2141,39 +2123,39 @@ section.homepage-introduction .vertical-wrapper div.content {
   padding-top: 5rem;
 }
 @media screen and (max-width: 768px) {
-  section.homepage-introduction .vertical-wrapper div.content {
+  .homepage-introduction .vertical-wrapper div.content {
     padding: 0;
     width: 100%;
     max-width: 100%;
   }
-  section.homepage-introduction .vertical-wrapper div.content p {
+  .homepage-introduction .vertical-wrapper div.content p {
     width: 100%;
   }
 }
-section.homepage-introduction .vertical-wrapper div.content h1 {
+.homepage-introduction .vertical-wrapper div.content h1 {
   font-size: 5rem;
   line-height: 5.3rem;
   letter-spacing: -0.1rem;
   width: 140%;
 }
 @media screen and (max-width: 768px) {
-  section.homepage-introduction .vertical-wrapper div.content h1 {
+  .homepage-introduction .vertical-wrapper div.content h1 {
     margin-bottom: 85%;
     width: 100%;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  section.homepage-introduction .vertical-wrapper div.content h1 {
+  .homepage-introduction .vertical-wrapper div.content h1 {
     margin-bottom: 40%;
   }
 }
-section.homepage-introduction .vertical-wrapper figure {
+.homepage-introduction .vertical-wrapper figure {
   position: relative;
   flex-basis: 44rem;
   align-self: flex-end;
 }
 @media screen and (max-width: 768px) {
-  section.homepage-introduction .vertical-wrapper figure {
+  .homepage-introduction .vertical-wrapper figure {
     position: absolute;
     top: 23%;
     height: 37%;
@@ -2181,24 +2163,24 @@ section.homepage-introduction .vertical-wrapper figure {
   }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  section.homepage-introduction .vertical-wrapper figure {
+  .homepage-introduction .vertical-wrapper figure {
     top: 20%;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 960px) {
-  section.homepage-introduction .vertical-wrapper figure {
+  .homepage-introduction .vertical-wrapper figure {
     align-self: center;
     text-align: right;
     margin-right: -10rem;
   }
 }
-section.homepage-introduction .vertical-wrapper figure img {
+.homepage-introduction .vertical-wrapper figure img {
   width: calc(100% - 4rem);
   height: 100%;
   object-fit: cover;
   object-position: 50% 25%;
 }
-section.homepage-introduction .vertical-wrapper figure .vertical-title {
+.homepage-introduction .vertical-wrapper figure .vertical-title {
   position: absolute;
   right: -32rem;
   bottom: -1.7rem;
@@ -2211,12 +2193,12 @@ section.homepage-introduction .vertical-wrapper figure .vertical-title {
   letter-spacing: 0.3rem;
 }
 @media screen and (max-width: 768px) {
-  section.homepage-introduction .vertical-wrapper figure .vertical-title {
+  .homepage-introduction .vertical-wrapper figure .vertical-title {
     display: none;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 960px) {
-  section.homepage-introduction .vertical-wrapper figure .vertical-title {
+  .homepage-introduction .vertical-wrapper figure .vertical-title {
     display: none;
   }
 }
