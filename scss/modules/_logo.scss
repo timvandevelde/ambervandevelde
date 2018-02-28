@@ -24,7 +24,7 @@ figure.logo {
     fill: white;
   }
 
-  body.sticky header.main-header &,
+  body.sticky .main-header &,
   body.sticky .menu-overlay & {
     transform: scale(0.6) translate(-2rem, -0.5rem);
     @include smartphone {
@@ -39,12 +39,12 @@ figure.logo {
     }
   }
 
-  header.main-header &,
+  .main-header &,
   .menu-overlay & {
     position: fixed;
     top: 4rem;
   }
-  header.main-header & {
+  .main-header & {
     z-index: 10;
     left: 6rem;
 

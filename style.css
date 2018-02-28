@@ -934,7 +934,7 @@ footer.main-footer .page-width a.button {
   font-size: 1.1rem;
   font-weight: bold;
 }
-header.main-header {
+.main-header {
   position: fixed;
   width: 100%;
   top: 0;
@@ -942,21 +942,21 @@ header.main-header {
   padding: 4rem 6rem 0;
 }
 @media screen and (max-width: 768px) {
-  header.main-header {
+  .main-header {
     height: 5rem;
   }
-  body.sticky header.main-header {
+  body.sticky .main-header {
     box-shadow: 0 0 10rem rgba(0, 0, 0, 0.1);
     background: white;
   }
-  body.on-dark.sticky header.main-header {
+  body.on-dark.sticky .main-header {
     background: none;
   }
 }
 header.page-header {
   padding-top: 16rem;
 }
-nav.main-navigation div.hamburger {
+.main-navigation div.hamburger {
   position: fixed;
   z-index: 10;
   top: 4rem;
@@ -968,7 +968,7 @@ nav.main-navigation div.hamburger {
   -o-transition: color 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: color 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-nav.main-navigation div.hamburger:before {
+.main-navigation div.hamburger:before {
   position: absolute;
   display: block;
   width: 4rem;
@@ -977,16 +977,16 @@ nav.main-navigation div.hamburger:before {
   font-size: 2rem;
   text-align: right;
 }
-body.on-dark nav.main-navigation div.hamburger {
+body.on-dark .main-navigation div.hamburger {
   color: white;
 }
 @media screen and (max-width: 768px) {
-  nav.main-navigation div.hamburger {
+  .main-navigation div.hamburger {
     top: 1.2rem;
     right: 4.5rem;
     font-size: 1.4rem;
   }
-  nav.main-navigation div.hamburger:before {
+  .main-navigation div.hamburger:before {
     font-size: 1.8rem;
   }
 }
@@ -1557,27 +1557,27 @@ figure.logo svg #wit {
 body.on-dark figure.logo svg #wit {
   fill: white;
 }
-body.sticky header.main-header figure.logo, body.sticky .menu-overlay figure.logo {
+body.sticky .main-header figure.logo, body.sticky .menu-overlay figure.logo {
   transform: scale(0.6) translate(-2rem, -0.5rem);
 }
 @media screen and (max-width: 768px) {
 }
-header.main-header figure.logo, .menu-overlay figure.logo {
+.main-header figure.logo, .menu-overlay figure.logo {
   position: fixed;
   top: 4rem;
 }
-header.main-header figure.logo {
+.main-header figure.logo {
   z-index: 10;
   left: 6rem;
 }
 @media screen and (max-width: 768px) {
-  header.main-header figure.logo {
+  .main-header figure.logo {
     top: 0rem;
     left: 2rem;
     max-width: 12rem;
     transition: transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
   }
-  header.main-header figure.logo svg {
+  .main-header figure.logo svg {
     width: 100%;
   }
 }
